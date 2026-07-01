@@ -1,27 +1,56 @@
+"use client";
+
+import { useState } from "react";
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
-      <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#101820]/45 backdrop-blur-md">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-          <div className="flex items-center gap-3">
-            <img src="/images/logo.png" alt="Твой Компас" className="h-14 w-auto" />
-          </div>
+<header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#101820]/45 backdrop-blur-md">
+  <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+    <img src="/images/logo.png" alt="Твой Компас" className="h-14 w-auto" />
 
-          <nav className="hidden items-center gap-8 text-sm font-medium text-[#F5EFE6]/80 md:flex">
-            <a href="#routes" className="hover:text-[#D6B16A]">Направления</a>
-            <a href="#how" className="hover:text-[#D6B16A]">Как проходит поездка</a>
-            <a href="#faq" className="hover:text-[#D6B16A]">FAQ</a>
-            <a href="#contacts" className="hover:text-[#D6B16A]">Контакты</a>
-          </nav>
+    <nav className="hidden items-center gap-8 text-sm font-medium text-[#F5EFE6]/80 md:flex">
+      <a href="#routes" className="hover:text-[#D6B16A]">Направления</a>
+      <a href="#how" className="hover:text-[#D6B16A]">Как проходит поездка</a>
+      <a href="#faq" className="hover:text-[#D6B16A]">FAQ</a>
+      <a href="#contacts" className="hover:text-[#D6B16A]">Контакты</a>
+    </nav>
 
-          <a
-            href="#contacts"
-            className="hidden rounded-full border border-[#D6B16A]/60 px-5 py-2 text-sm font-semibold text-[#D6B16A] transition hover:bg-[#D6B16A] hover:text-[#101820] md:block"
-          >
-            Связаться
-          </a>
-        </div>
-      </header>
+    <a
+      href="#contacts"
+      className="hidden rounded-full border border-[#D6B16A]/60 px-5 py-2 text-sm font-semibold text-[#D6B16A] transition hover:bg-[#D6B16A] hover:text-[#101820] md:block"
+    >
+      Связаться
+    </a>
+
+    <button
+      onClick={() => setIsMenuOpen(!isMenuOpen)}
+      className="text-3xl text-[#F5EFE6] md:hidden"
+    >
+      ☰
+    </button>
+  </div>
+
+  {isMenuOpen && (
+    <div className="border-t border-white/10 bg-[#101820]/95 px-6 py-6 backdrop-blur-xl md:hidden">
+      <div className="flex flex-col gap-5 text-lg text-[#F5EFE6]">
+        <a onClick={() => setIsMenuOpen(false)} href="#routes">Направления</a>
+        <a onClick={() => setIsMenuOpen(false)} href="#how">Как проходит поездка</a>
+        <a onClick={() => setIsMenuOpen(false)} href="#faq">FAQ</a>
+        <a onClick={() => setIsMenuOpen(false)} href="#contacts">Контакты</a>
+
+        <a
+          onClick={() => setIsMenuOpen(false)}
+          href="#contacts"
+          className="mt-3 rounded-full bg-[#D6B16A] px-6 py-3 text-center font-semibold text-[#101820]"
+        >
+          Связаться
+        </a>
+      </div>
+    </div>
+  )}
+</header>
 
       <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20">
         <div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-60" />
@@ -558,61 +587,32 @@ export default function Home() {
       </h2>
     </div>
 
-    <div className="space-y-5">
+    <div className="space-y-4">
       {[
-        {
-          question: "Что входит в стоимость?",
-          answer:
-            "В стоимость входит трансфер, сопровождение водителя-гида и посещение всех основных локаций маршрута.",
-        },
-        {
-          question: "Что не входит в стоимость?",
-          answer:
-            "Питание, экосборы, канатные дороги и личные расходы оплачиваются отдельно.",
-        },
-        {
-          question: "Можно ли поехать с детьми?",
-          answer:
-            "Да, большинство маршрутов подходят для поездок с детьми. Перед бронированием мы поможем подобрать наиболее комфортный вариант.",
-        },
-        {
-          question: "Что взять с собой?",
-          answer:
-            "Рекомендуем взять теплую одежду, удобную обувь, наличные деньги, солнцезащитные очки и воду.",
-        },
-        {
-          question: "Насколько безопасны поездки?",
-          answer:
-            "Мы работаем только с опытными водителями-гидами и проверенными маршрутами. Безопасность туристов для нас всегда в приоритете.",
-        },
-        {
-          question: "Что будет, если испортится погода?",
-          answer:
-            "Если погодные условия будут небезопасными для поездки, мы заранее свяжемся с вами и предложим перенос даты или альтернативный маршрут.",
-        },
-        {
-          question: "Как забронировать экскурсию?",
-          answer:
-            "Оставьте заявку на сайте или напишите нам в WhatsApp / Telegram — мы быстро свяжемся с вами и подтвердим бронь.",
-        },
-        {
-          question: "За сколько дней лучше бронировать поездку?",
-          answer:
-            "В сезон рекомендуем бронировать экскурсии заранее, особенно популярные направления и индивидуальные поездки.",
-        },
-      ].map((item) => (
-        <div
-          key={item.question}
-          className="rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md"
+        ["Что входит в стоимость?", "В стоимость входит трансфер, сопровождение водителя-гида и посещение всех основных локаций маршрута."],
+        ["Что не входит в стоимость?", "Питание, экосборы, канатные дороги и личные расходы оплачиваются отдельно."],
+        ["Можно ли поехать с детьми?", "Да, большинство маршрутов подходят для поездок с детьми. Перед бронированием мы поможем подобрать наиболее комфортный вариант."],
+        ["Что взять с собой?", "Рекомендуем взять теплую одежду, удобную обувь, наличные деньги, солнцезащитные очки и воду."],
+        ["Насколько безопасны поездки?", "Мы работаем только с опытными водителями-гидами и проверенными маршрутами. Безопасность туристов для нас всегда в приоритете."],
+        ["Что будет, если испортится погода?", "Если погодные условия будут небезопасными для поездки, мы заранее свяжемся с вами и предложим перенос даты или альтернативный маршрут."],
+        ["Как забронировать экскурсию?", "Оставьте заявку на сайте или напишите нам в WhatsApp / Telegram — мы быстро свяжемся с вами и подтвердим бронь."],
+        ["За сколько дней лучше бронировать поездку?", "В сезон рекомендуем бронировать экскурсии заранее, особенно популярные направления и индивидуальные поездки."],
+      ].map(([question, answer]) => (
+        <details
+          key={question}
+          className="group rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md"
         >
-          <h3 className="text-xl font-semibold">
-            {item.question}
-          </h3>
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-xl font-semibold">
+            {question}
+            <span className="text-[#D6B16A] transition group-open:rotate-45">
+              +
+            </span>
+          </summary>
 
-          <p className="mt-4 leading-8 text-[#F5EFE6]/75">
-            {item.answer}
+          <p className="mt-5 leading-8 text-[#F5EFE6]/75">
+            {answer}
           </p>
-        </div>
+        </details>
       ))}
     </div>
   </div>
@@ -709,6 +709,13 @@ export default function Home() {
     </footer>
   </div>
 </section>
-    </main>
+  <a
+  href="https://wa.me/79298606885"
+  target="_blank"
+  className="fixed bottom-6 right-6 z-[9999] flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-3xl shadow-2xl transition hover:scale-110"
+>
+  💬
+</a>
+</main>
   );
 }
