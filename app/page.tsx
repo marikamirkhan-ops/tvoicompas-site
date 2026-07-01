@@ -16,14 +16,6 @@ export default function Home() {
       <a href="#faq" className="hover:text-[#D6B16A]">FAQ</a>
       <a href="#contacts" className="hover:text-[#D6B16A]">Контакты</a>
     </nav>
-
-    <a
-      href="#contacts"
-      className="hidden rounded-full border border-[#D6B16A]/60 px-5 py-2 text-sm font-semibold text-[#D6B16A] transition hover:bg-[#D6B16A] hover:text-[#101820] md:block"
-    >
-      Связаться
-    </a>
-
     <button
       onClick={() => setIsMenuOpen(!isMenuOpen)}
       className="text-3xl text-[#F5EFE6] md:hidden"
