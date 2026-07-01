@@ -8,14 +8,30 @@ export default function Home() {
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
 <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#101820]/45 backdrop-blur-md">
   <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-    <img src="/images/logo.png" alt="Твой Компас" className="h-14 w-auto" />
+    <img
+      src="/images/logo.png"
+      alt="Твой Компас"
+      className="h-14 w-auto"
+    />
 
     <nav className="hidden items-center gap-8 text-sm font-medium text-[#F5EFE6]/80 md:flex">
-      <a href="#routes" className="hover:text-[#D6B16A]">Направления</a>
-      <a href="#how" className="hover:text-[#D6B16A]">Как проходит поездка</a>
-      <a href="#faq" className="hover:text-[#D6B16A]">FAQ</a>
-      <a href="#contacts" className="hover:text-[#D6B16A]">Контакты</a>
+      <a href="#routes" className="hover:text-[#D6B16A]">
+        Направления
+      </a>
+
+      <a href="#how" className="hover:text-[#D6B16A]">
+        Как проходит поездка
+      </a>
+
+      <a href="#faq" className="hover:text-[#D6B16A]">
+        FAQ
+      </a>
+
+      <a href="#contacts" className="hover:text-[#D6B16A]">
+        Контакты
+      </a>
     </nav>
+
     <button
       onClick={() => setIsMenuOpen(!isMenuOpen)}
       className="text-3xl text-[#F5EFE6] md:hidden"
@@ -27,17 +43,20 @@ export default function Home() {
   {isMenuOpen && (
     <div className="border-t border-white/10 bg-[#101820]/95 px-6 py-6 backdrop-blur-xl md:hidden">
       <div className="flex flex-col gap-5 text-lg text-[#F5EFE6]">
-        <a onClick={() => setIsMenuOpen(false)} href="#routes">Направления</a>
-        <a onClick={() => setIsMenuOpen(false)} href="#how">Как проходит поездка</a>
-        <a onClick={() => setIsMenuOpen(false)} href="#faq">FAQ</a>
-        <a onClick={() => setIsMenuOpen(false)} href="#contacts">Контакты</a>
+        <a onClick={() => setIsMenuOpen(false)} href="#routes">
+          Направления
+        </a>
 
-        <a
-          onClick={() => setIsMenuOpen(false)}
-          href="#contacts"
-          className="mt-3 rounded-full bg-[#D6B16A] px-6 py-3 text-center font-semibold text-[#101820]"
-        >
-          Связаться
+        <a onClick={() => setIsMenuOpen(false)} href="#how">
+          Как проходит поездка
+        </a>
+
+        <a onClick={() => setIsMenuOpen(false)} href="#faq">
+          FAQ
+        </a>
+
+        <a onClick={() => setIsMenuOpen(false)} href="#contacts">
+          Контакты
         </a>
       </div>
     </div>
@@ -488,11 +507,11 @@ export default function Home() {
       ].map((item) => (
         <div
           key={item.title}
-          className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md transition hover:border-[#D6B16A]/40 hover:bg-white/[0.07]"
+          className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-md transition hover:border-[#D6B16A]/40 hover:bg-white/[0.07] md:p-8"
         >
-          <div className="text-4xl">{item.icon}</div>
+          <div className="text-3xl md:text-4xl">{item.icon}</div>
 
-          <h3 className="mt-6 text-2xl font-semibold leading-snug">
+          <h3 className="mt-4 text-lg font-semibold leading-snug md:mt-6 md:text-2xl">
             {item.title}
           </h3>
         </div>
@@ -548,15 +567,15 @@ export default function Home() {
       ].map((step, index) => (
         <div
           key={step.title}
-          className="relative rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md"
+          className="relative rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-md md:p-8"
         >
           <div className="absolute right-6 top-6 text-sm text-[#D6B16A]/60">
             0{index + 1}
           </div>
 
-          <div className="text-4xl">{step.icon}</div>
+          <div className="text-3xl md:text-4xl">{step.icon}</div>
 
-          <h3 className="mt-6 text-xl font-semibold leading-snug">
+          <h3 className="mt-4 text-base font-semibold leading-snug md:mt-6 md:text-xl">
             {step.title}
           </h3>
         </div>
