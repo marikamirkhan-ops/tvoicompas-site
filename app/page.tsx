@@ -42,14 +42,14 @@ export default function Home() {
     </button>
   </div>
 
-  {isMenuOpen && (
+{isMenuOpen && (
   <>
     <div
-      className="fixed inset-0 z-40 bg-black/40 md:hidden"
+      className="fixed inset-0 z-[60] bg-black/40 md:hidden"
       onClick={() => setIsMenuOpen(false)}
     />
 
-    <div className="absolute left-0 top-20 z-50 w-full border-t border-white/10 bg-[#101820]/95 px-6 py-6 backdrop-blur-xl md:hidden">
+    <div className="absolute left-0 top-20 z-[70] w-full border-t border-white/10 bg-[#101820]/95 px-6 py-6 backdrop-blur-xl md:hidden">
       <div className="flex flex-col gap-5 text-lg text-[#F5EFE6]">
         <a onClick={() => setIsMenuOpen(false)} href="#routes">
           Направления
