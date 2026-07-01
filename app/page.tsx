@@ -8,11 +8,13 @@ export default function Home() {
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
 <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#101820]/45 backdrop-blur-md">
   <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-    <img
-      src="/images/logo.png"
-      alt="Твой Компас"
-      className="h-14 w-auto"
-    />
+    <a href="#" aria-label="Наверх">
+  <img
+    src="/images/logo.png"
+    alt="Твой Компас"
+    className="h-14 w-auto"
+  />
+</a>
 
     <nav className="hidden items-center gap-8 text-sm font-medium text-[#F5EFE6]/80 md:flex">
       <a href="#routes" className="hover:text-[#D6B16A]">
@@ -41,7 +43,13 @@ export default function Home() {
   </div>
 
   {isMenuOpen && (
-    <div className="border-t border-white/10 bg-[#101820]/95 px-6 py-6 backdrop-blur-xl md:hidden">
+  <>
+    <div
+      className="fixed inset-0 z-40 bg-black/40 md:hidden"
+      onClick={() => setIsMenuOpen(false)}
+    />
+
+    <div className="absolute left-0 top-20 z-50 w-full border-t border-white/10 bg-[#101820]/95 px-6 py-6 backdrop-blur-xl md:hidden">
       <div className="flex flex-col gap-5 text-lg text-[#F5EFE6]">
         <a onClick={() => setIsMenuOpen(false)} href="#routes">
           Направления
@@ -60,7 +68,8 @@ export default function Home() {
         </a>
       </div>
     </div>
-  )}
+  </>
+)}
 </header>
 
       <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20">
