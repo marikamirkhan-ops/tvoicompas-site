@@ -307,13 +307,13 @@ export default function Home() {
             <img
               src={tour.image}
               alt={tour.title}
-              className="h-64 w-full object-cover transition duration-700 group-hover:scale-105"
+              className="h-44 w-full object-cover transition duration-700 group-hover:scale-105 md:h-64"
             />
           </div>
 
-          <div className="p-6">
+          <div className="p-5 md:p-6">
             <div className="flex items-center justify-between">
-              <h3 className="text-2xl font-bold">{tour.title}</h3>
+              <h3 className="text-xl font-bold md:text-2xl">{tour.title}</h3>
 
               <span className="text-sm text-[#D6B16A]">
                 {tour.time}
