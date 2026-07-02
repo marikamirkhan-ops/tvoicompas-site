@@ -353,130 +353,83 @@ export default function Home() {
   </div>
 </section>
 <section
-  id="quiz"
   className="bg-[#101820] px-6 py-24 text-[#F5EFE6]"
 >
-  <div className="mx-auto max-w-5xl rounded-[40px] border border-white/10 bg-white/5 p-8 backdrop-blur-xl md:p-14">
-    <div className="max-w-3xl">
+  <div className="mx-auto max-w-4xl rounded-[32px] border border-white/10 bg-white/5 p-8 backdrop-blur-xl md:p-12">
+    <div className="mb-10 text-center">
       <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
-        Подбор экскурсии
+        ЗАЯВКА
       </p>
 
-      <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-        Не знаете, что выбрать?
+      <h2 className="text-3xl font-bold leading-tight md:text-5xl">
+        Подберем экскурсию под вас
       </h2>
 
-      <p className="mt-5 text-lg leading-8 text-[#F5EFE6]/75">
-        Ответьте на несколько вопросов — и мы поможем подобрать идеальную экскурсию.
+      <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#F5EFE6]/70 md:text-lg">
+        Оставьте заявку — мы поможем подобрать маршрут,
+        расскажем детали поездки и ответим на все вопросы.
       </p>
     </div>
 
-    <div className="mt-14 grid gap-10 md:grid-cols-2">
-      <div>
-        <p className="mb-4 text-lg font-semibold">
-          Откуда выезжаете?
-        </p>
+    <form className="grid gap-5 md:grid-cols-2">
+      <input
+        type="text"
+        placeholder="Ваше имя *"
+        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+      />
 
-        <div className="flex flex-wrap gap-3">
-          {[
-            "Кисловодск",
-            "Ессентуки",
-            "Пятигорск",
-            "Железноводск",
-            "Минеральные Воды",
-          ].map((city) => (
-            <button
-              key={city}
-              className="rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm transition hover:border-[#D6B16A] hover:bg-[#D6B16A]/10"
-            >
-              {city}
-            </button>
-          ))}
-        </div>
-      </div>
+      <input
+        type="tel"
+        placeholder="Телефон *"
+        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+      />
 
-      <div>
-        <p className="mb-4 text-lg font-semibold">
-          Что вам ближе?
-        </p>
+      <input
+        type="text"
+        placeholder="Где вас забрать?"
+        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+      />
 
-        <div className="flex flex-wrap gap-3">
-          {[
-            "Панорамные виды",
-            "Водопады и реки",
-            "Горные перевалы",
-            "Спокойная поездка",
-            "Красивые дороги",
-            "История и древние места",
-            "Максимум природы",
-          ].map((item) => (
-            <button
-              key={item}
-              className="rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm transition hover:border-[#D6B16A] hover:bg-[#D6B16A]/10"
-            >
-              {item}
-            </button>
-          ))}
-        </div>
-      </div>
+      <input
+        type="text"
+        placeholder="Направление"
+        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+      />
 
-      <div>
-        <p className="mb-4 text-lg font-semibold">
-          Формат поездки
-        </p>
+      <input
+        type="text"
+        placeholder="Желаемые даты"
+        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+      />
 
-        <div className="flex flex-wrap gap-3">
-          {["Групповая", "Индивидуальная"].map((type) => (
-            <button
-              key={type}
-              className="rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm transition hover:border-[#D6B16A] hover:bg-[#D6B16A]/10"
-            >
-              {type}
-            </button>
-          ))}
-        </div>
-
-        <p className="mt-4 text-sm text-[#F5EFE6]/55">
-          Группы до 6–7 человек
-        </p>
-      </div>
-
-      <div>
-        <p className="mb-4 text-lg font-semibold">
-          Количество человек
-        </p>
-
-        <div className="flex flex-wrap gap-3">
-          {["1", "2", "3", "4", "5", "6+"].map((count) => (
-            <button
-              key={count}
-              className="rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm transition hover:border-[#D6B16A] hover:bg-[#D6B16A]/10"
-            >
-              {count}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    <div className="mt-14 flex flex-col items-start gap-5 md:flex-row md:items-center md:justify-between">
-      <div>
-        <p className="text-lg font-semibold">
-          Поможем подобрать лучший маршрут именно для вас
-        </p>
-
-        <p className="mt-2 text-[#F5EFE6]/65">
-          Ответим в WhatsApp или Telegram в течение нескольких минут
-        </p>
-      </div>
-
-      <a
-        href="#contacts"
-        className="rounded-full bg-[#D6B16A] px-8 py-4 font-semibold text-[#101820] transition hover:bg-[#E4C37E]"
+      <select
+        className="rounded-2xl border border-white/10 bg-[#18232D] px-5 py-4 text-[#F5EFE6] outline-none focus:border-[#D6B16A]"
       >
-        Подобрать маршрут
-      </a>
-    </div>
+        <option>Формат экскурсии</option>
+        <option>Групповая</option>
+        <option>Индивидуальная</option>
+        <option>Подскажите лучший вариант</option>
+      </select>
+
+      <input
+        type="number"
+        placeholder="Количество человек"
+        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A] md:col-span-2"
+      />
+
+      <textarea
+        placeholder="Комментарий"
+        rows={5}
+        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A] md:col-span-2"
+      />
+
+      <button
+        type="submit"
+        className="rounded-2xl bg-[#D6B16A] px-8 py-5 text-lg font-semibold text-[#101820] transition hover:scale-[1.02] hover:bg-[#E7C98C] md:col-span-2"
+      >
+        Оставить заявку
+      </button>
+    </form>
   </div>
 </section>
 <section className="bg-[#0D141B] px-6 py-24 text-[#F5EFE6]">
