@@ -95,7 +95,7 @@ export default function JilySuPage() {
 
         <div className="mt-10">
           <p className="text-5xl font-bold leading-none">
-            от 22 200 ₽
+            от 14 800 ₽
           </p>
 
           <p className="mt-4 text-lg text-[#F5EFE6]/70">
@@ -157,6 +157,78 @@ export default function JilySuPage() {
       <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
       <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
       <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
+    </div>
+  </div>
+</section>
+<section className="bg-[#101820] px-6 py-24">
+  <div className="mx-auto max-w-5xl">
+    <div className="mb-14">
+      <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
+        ПРОГРАММА
+      </p>
+
+      <h2 className="text-3xl font-bold md:text-5xl">
+        Программа поездки
+      </h2>
+    </div>
+
+    <div className="space-y-12">
+      {[
+        {
+          title: "Выезд из КМВ",
+          text: "Ориентировочный выезд — около 7 утра. Маршрут проходит по одной из самых красивых дорог Северного Кавказа.",
+        },
+
+        {
+          title: "Завтрак с видом на Эльбрус",
+          text: "По пути можно остановиться в кафе с панорамным видом на Эльбрус.",
+        },
+
+        {
+          title: "Панорамные смотровые",
+          text: "Остановки на лучших обзорных точках маршрута: Ит Джатмаз, Бандитский шпиль, ущелье Харбас и «Горы Аватары».",
+        },
+
+        {
+          title: "Инстаграмная дорога",
+          text: "Один из самых живописных участков маршрута с панорамой Эльбруса и горных серпантинов.",
+        },
+
+        {
+          title: "Урочище Джилы-Су",
+          text: "Нарзанные источники, природные купели, водопады и панорамные виды Кавказа.",
+        },
+
+        {
+          title: "Водопады Кавказа",
+          text: "По маршруту увидим водопады Султан, Къызыл-Къол-Суу и Къара-Къая-Суу.",
+        },
+
+        {
+          title: "Суслики и горные пейзажи",
+          text: "По пути часто встречаются горные суслики — один из символов Джилы-Су.",
+        },
+
+        {
+          title: "Обед с национальной кухней",
+          text: "Остановка в кафе с балкарской кухней и традиционными хычынами.",
+        },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="border-b border-white/10 pb-10 last:border-none"
+        >
+          <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+            <h3 className="text-2xl font-semibold md:w-[35%]">
+              {item.title}
+            </h3>
+
+            <p className="max-w-2xl text-lg leading-8 text-[#F5EFE6]/70 md:w-[60%]">
+              {item.text}
+            </p>
+          </div>
+        </div>
+      ))}
     </div>
   </div>
 </section>
