@@ -34,7 +34,7 @@ export const metadata = {
 
     images: [
       {
-        url: "/images/hero.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Твой Компас",
