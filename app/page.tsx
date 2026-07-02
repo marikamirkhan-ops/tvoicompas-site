@@ -3,7 +3,36 @@
 import { useState } from "react";
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+const [formData, setFormData] = useState({
+  name: "",
+  phone: "",
+  pickup: "",
+  direction: "",
+  dates: "",
+  format: "",
+  people: "",
+  comment: "",
+});
 
+const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const message = `
+Здравствуйте! Хочу оставить заявку на экскурсию.
+
+Имя: ${formData.name}
+Телефон: ${formData.phone}
+Где забрать: ${formData.pickup}
+Направление: ${formData.direction}
+Желаемые даты: ${formData.dates}
+Формат экскурсии: ${formData.format}
+Количество человек: ${formData.people}
+Комментарий: ${formData.comment}
+`;
+
+  const url = `https://wa.me/79298606885?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+};
   return (
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
 <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#101820]/45 backdrop-blur-md">
@@ -371,59 +400,91 @@ export default function Home() {
       </p>
     </div>
 
-    <form className="grid gap-5 md:grid-cols-2">
+    <form onSubmit={handleFormSubmit} className="grid gap-5 md:grid-cols-2">
       <input
-        type="text"
-        placeholder="Ваше имя *"
-        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
-      />
+  type="text"
+  placeholder="Ваше имя *"
+  value={formData.name}
+  onChange={(e) =>
+    setFormData({ ...formData, name: e.target.value })
+  }
+  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+/>
 
       <input
-        type="tel"
-        placeholder="Телефон *"
-        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
-      />
+  type="tel"
+  placeholder="Телефон *"
+  value={formData.phone}
+  onChange={(e) =>
+    setFormData({ ...formData, phone: e.target.value })
+  }
+  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+/>
 
       <input
-        type="text"
-        placeholder="Где вас забрать?"
-        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
-      />
+  type="text"
+  placeholder="Где вас забрать?"
+  value={formData.pickup}
+  onChange={(e) =>
+    setFormData({ ...formData, pickup: e.target.value })
+  }
+  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+/>
 
       <input
-        type="text"
-        placeholder="Направление"
-        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
-      />
+  type="text"
+  placeholder="Направление"
+  value={formData.direction}
+  onChange={(e) =>
+    setFormData({ ...formData, direction: e.target.value })
+  }
+  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+/>
 
       <input
-        type="text"
-        placeholder="Желаемые даты"
-        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
-      />
+  type="text"
+  placeholder="Желаемые даты"
+  value={formData.dates}
+  onChange={(e) =>
+    setFormData({ ...formData, dates: e.target.value })
+  }
+  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+/>
+  <select
+  value={formData.format}
+  onChange={(e) =>
+    setFormData({ ...formData, format: e.target.value })
+  }
+  className="rounded-2xl border border-white/10 bg-[#18232D] px-5 py-4 text-[#F5EFE6] outline-none focus:border-[#D6B16A]"
+>
+  <option value="" disabled hidden>
+    Формат экскурсии
+  </option>
 
-      <select
-        className="rounded-2xl border border-white/10 bg-[#18232D] px-5 py-4 text-[#F5EFE6] outline-none focus:border-[#D6B16A]"
-      >
-        <option value="" disabled selected>
-  Выберите формат экскурсии
-</option>
-        <option>Групповая</option>
-        <option>Индивидуальная</option>
-        <option>Подскажите лучший вариант</option>
-      </select>
+  <option>Групповая</option>
+  <option>Индивидуальная</option>
+  <option>Подскажите лучший вариант</option>
+</select>
 
       <input
-        type="number"
-        placeholder="Количество человек"
-        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A] md:col-span-2"
-      />
+  type="number"
+  placeholder="Количество человек"
+  value={formData.people}
+  onChange={(e) =>
+    setFormData({ ...formData, people: e.target.value })
+  }
+  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A] md:col-span-2"
+/>
 
       <textarea
-        placeholder="Комментарий"
-        rows={5}
-        className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A] md:col-span-2"
-      />
+  placeholder="Комментарий"
+  rows={5}
+  value={formData.comment}
+  onChange={(e) =>
+    setFormData({ ...formData, comment: e.target.value })
+  }
+  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A] md:col-span-2"
+/>
 
       <button
         type="submit"
