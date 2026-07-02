@@ -232,6 +232,99 @@ export default function JilySuPage() {
     </div>
   </div>
 </section>
+<section className="bg-[#101820] px-6 py-24">
+  <div className="mx-auto max-w-5xl">
+    <div className="mb-14">
+      <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
+        FAQ
+      </p>
+
+      <h2 className="text-3xl font-bold md:text-5xl">
+        Частые вопросы
+      </h2>
+    </div>
+
+    <div className="space-y-5">
+      {[
+        {
+          question: "Что входит в стоимость?",
+          answer:
+            "Трансфер по всему маршруту, сопровождение водителя-гида и все остановки по программе поездки.",
+        },
+
+        {
+          question: "Что оплачивается отдельно?",
+          answer:
+            "Питание, ЭКО сборы, личные расходы.",
+        },
+
+        {
+          question: "Что взять с собой?",
+          answer:
+            "Удобную обувь, ветровку, головной убор, солнцезащитные очки и крем от загара.",
+        },
+
+        {
+          question: "Можно ли поехать с детьми?",
+          answer:
+            "Да, маршрут подходит для поездок с детьми.",
+        },
+
+        {
+          question: "Что будет при плохой погоде?",
+          answer:
+            "Если погодные условия могут повлиять на безопасность или впечатления от поездки, мы заранее предложим перенос даты или альтернативный маршрут.",
+        },
+      ].map((item, index) => (
+        <details
+          key={index}
+          className="group rounded-[28px] border border-white/10 bg-white/5 p-7 backdrop-blur-xl"
+        >
+          <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-semibold">
+            {item.question}
+
+            <span className="text-2xl text-[#D6B16A] transition group-open:rotate-45">
+              +
+            </span>
+          </summary>
+
+          <p className="mt-5 max-w-3xl text-base leading-7 text-[#F5EFE6]/70">
+            {item.answer}
+          </p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+<section className="bg-[#101820] px-6 pb-28 pt-10">
+  <div className="mx-auto max-w-5xl rounded-[40px] border border-white/10 bg-white/5 px-8 py-16 text-center backdrop-blur-xl md:px-16">
+    <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
+      ТВОЙ КОМПАС
+    </p>
+
+    <h2 className="text-3xl font-bold leading-tight md:text-5xl">
+      Готовы отправиться
+      <br />
+      в путешествие?
+    </h2>
+
+    <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#F5EFE6]/70">
+      Напишите нам — поможем подобрать удобную дату,
+      расскажем детали поездки и ответим на все вопросы.
+    </p>
+
+    <div className="mt-10">
+      <a
+        href="https://wa.me/79298606885"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex rounded-full bg-[#D6B16A] px-8 py-4 text-lg font-semibold text-[#101820] transition hover:scale-105 hover:bg-[#E7C98C]"
+      >
+        Забронировать
+      </a>
+    </div>
+  </div>
+</section>
     </main>
   );
 }
