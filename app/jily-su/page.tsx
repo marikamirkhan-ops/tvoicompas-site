@@ -62,6 +62,8 @@ export default function JilySuPage() {
         "/images/jilysu-4.jpg",
         "/images/jilysu-5.jpg",
         "/images/jilysu-6.jpg",
+        "/images/jilysu-7.jpg",
+        "/images/jilysu-8.jpg",
       ].map((image, index) => (
         <div
           key={index}
@@ -80,6 +82,8 @@ export default function JilySuPage() {
 
     <div className="mt-8 flex justify-center gap-3">
       <div className="h-2.5 w-2.5 rounded-full bg-[#D6B16A]" />
+      <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
+      <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
       <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
       <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
       <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
