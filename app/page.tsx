@@ -405,7 +405,9 @@ export default function Home() {
       <select
         className="rounded-2xl border border-white/10 bg-[#18232D] px-5 py-4 text-[#F5EFE6] outline-none focus:border-[#D6B16A]"
       >
-        <option>Формат экскурсии</option>
+        <option value="" disabled selected>
+  Выберите формат экскурсии
+</option>
         <option>Групповая</option>
         <option>Индивидуальная</option>
         <option>Подскажите лучший вариант</option>
