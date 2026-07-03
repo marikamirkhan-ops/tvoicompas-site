@@ -467,19 +467,19 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     </form>
   </div>
 </section>
-<section className="bg-[#0D141B] px-6 py-24 text-[#F5EFE6]">
+<section className="bg-[#0D141B] px-6 py-20 text-[#F5EFE6]">
   <div className="mx-auto max-w-7xl">
-    <div className="mb-14 max-w-3xl">
+    <div className="mb-12 max-w-3xl">
       <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
         Почему выбирают нас
       </p>
 
-      <h2 className="text-4xl font-bold leading-tight md:text-5xl">
+      <h2 className="text-3xl font-bold leading-tight md:text-5xl">
         Путешествия, в которые хочется возвращаться
       </h2>
     </div>
 
-    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {[
         {
           icon: "🚙",
@@ -508,11 +508,11 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       ].map((item) => (
         <div
           key={item.title}
-          className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-md transition hover:border-[#D6B16A]/40 hover:bg-white/[0.07] md:p-8"
+          className="rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition hover:border-[#D6B16A]/40 hover:bg-white/[0.07] md:p-6"
         >
-          <div className="text-3xl md:text-4xl">{item.icon}</div>
+          <div className="text-2xl md:text-4xl">{item.icon}</div>
 
-          <h3 className="mt-4 text-lg font-semibold leading-snug md:mt-6 md:text-2xl">
+          <h3 className="mt-3 text-base font-semibold leading-snug md:mt-5 md:text-xl">
             {item.title}
           </h3>
         </div>
@@ -520,22 +520,23 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </section>
+
 <section
   id="how"
-  className="bg-[#101820] px-6 py-24 text-[#F5EFE6]"
+  className="bg-[#101820] px-6 py-20 text-[#F5EFE6]"
 >
   <div className="mx-auto max-w-7xl">
-    <div className="mb-16 max-w-3xl">
+    <div className="mb-12 max-w-3xl">
       <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
         Как проходит поездка
       </p>
 
-      <h2 className="text-4xl font-bold leading-tight md:text-5xl">
+      <h2 className="text-3xl font-bold leading-tight md:text-5xl">
         Все просто и продумано
       </h2>
     </div>
 
-    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
       {[
         {
           icon: "📝",
@@ -568,15 +569,15 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       ].map((step, index) => (
         <div
           key={step.title}
-          className="relative rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-md md:p-8"
+          className="relative rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-md md:p-6"
         >
-          <div className="absolute right-6 top-6 text-sm text-[#D6B16A]/60">
+          <div className="absolute right-5 top-5 text-xs text-[#D6B16A]/60">
             0{index + 1}
           </div>
 
-          <div className="text-3xl md:text-4xl">{step.icon}</div>
+          <div className="text-2xl md:text-4xl">{step.icon}</div>
 
-          <h3 className="mt-4 text-base font-semibold leading-snug md:mt-6 md:text-xl">
+          <h3 className="mt-3 text-sm font-semibold leading-snug md:mt-5 md:text-lg">
             {step.title}
           </h3>
         </div>
