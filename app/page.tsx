@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";;
+import { useEffect, useState } from "react";
 export default function Home() {
 const [showScrollTop, setShowScrollTop] = useState(false);
 
@@ -89,7 +89,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       onClick={() => setIsMenuOpen(false)}
     />
 
-    <div className="absolute left-0 top-20 z-[70] w-full border-t border-white/10 bg-[#101820]/95 px-6 py-6 backdrop-blur-xl md:hidden">
+    <div className="absolute left-0 top-16 z-[70] w-full border-t border-white/10 bg-[#101820]/95 px-6 py-6 backdrop-blur-xl md:hidden">
       <div className="flex flex-col gap-5 text-lg text-[#F5EFE6]">
         <a onClick={() => setIsMenuOpen(false)} href="#routes">
           Направления
@@ -113,144 +113,124 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 </header>
 
       <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20">
-        <div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-[#101820]/40" />
+  <div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-60" />
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl">
-          <p className="mb-5 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
-            Твой Компас
-          </p>
+  <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/80 to-transparent" />
 
-          <h1 className="max-w-3xl text-5xl font-bold leading-tight md:text-7xl">
-            Превращаем мечты в маршруты
-          </h1>
+  <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-[#101820]/40" />
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#F5EFE6]/80 md:text-xl">
-            Мини-группы, комфортные внедорожники, выезд из любой точки КМВ.
-          </p>
+  <div className="relative z-10 mx-auto w-full max-w-7xl">
+    <p className="mb-5 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
+      Твой Компас
+    </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a className="rounded-full bg-[#D6B16A] px-8 py-4 text-center font-semibold text-[#101820] transition hover:bg-[#E4C37E]" href="#quiz">
-              Подобрать экскурсию
-            </a>
+    <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-7xl">
+      Превращаем мечты в маршруты
+    </h1>
 
-            <a className="rounded-full border border-[#F5EFE6]/40 px-8 py-4 text-center font-semibold text-[#F5EFE6] transition hover:bg-[#F5EFE6]/10" href="#contacts">
-              Связаться с нами
-            </a>
-          </div>
+    <p className="mt-6 max-w-2xl text-base leading-7 text-[#F5EFE6]/75 md:text-xl md:leading-8">
+      Мини-группы, комфортные внедорожники, выезд из любой точки КМВ.
+    </p>
 
-          <p className="mt-5 text-sm text-[#F5EFE6]/65">
-            Ответим в WhatsApp или Telegram в течение нескольких минут
-          </p>
-
-          <div className="mt-14 grid max-w-3xl gap-4 md:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
-              <p className="text-2xl">🚙</p>
-              <p className="mt-3 text-sm text-[#F5EFE6]/80">Забираем из любой точки КМВ</p>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
-              <p className="text-2xl">👥</p>
-              <p className="mt-3 text-sm text-[#F5EFE6]/80">Мини-группы 6–7 человек</p>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
-              <p className="text-2xl">🛡</p>
-              <p className="mt-3 text-sm text-[#F5EFE6]/80">Комфортно и безопасно</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-  id="routes"
-  className="bg-[#101820] px-6 py-24 text-[#F5EFE6]"
->
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-14 flex items-end justify-between">
-      <div>
-        <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
-          Популярные маршруты
-        </p>
-
-        <h2 className="text-4xl font-bold md:text-5xl">
-          Самые популярные экскурсии
-        </h2>
-      </div>
-    </div>
-
-    <div className="grid grid-cols-2 gap-4">
-  {[
-    {
-      title: "Джилы-Су",
-      price: "от 3 700 ₽",
-      duration: "8–9 часов",
-      href: "/jily-su",
-    },
-
-    {
-      title: "Домбай",
-      price: "от 4 200 ₽",
-      duration: "12–13 часов",
-      href: "/dombay",
-    },
-
-    {
-      title: "Бермамыт",
-      price: "от 3 700 ₽",
-      duration: "8–9 часов",
-      href: "/bermamyt",
-    },
-
-    {
-      title: "Эльбрус",
-      price: "от 4 200 ₽",
-      duration: "12–13 часов",
-      href: "/elbrus",
-    },
-  ].map((tour, index) => (
-    <div
-      key={index}
-      className="rounded-[28px] border border-white/10 bg-white/5 p-5 backdrop-blur-xl"
-    >
-      <h3 className="text-xl font-semibold">
-        {tour.title}
-      </h3>
-
-      <div className="mt-4 space-y-1">
-        <p className="text-lg font-medium text-[#D6B16A]">
-          {tour.price}
-        </p>
-
-        <p className="text-sm text-[#F5EFE6]/60">
-          {tour.duration}
-        </p>
-      </div>
-
+    <div className="mt-9">
       <a
-        href={tour.href}
-        className="mt-5 inline-flex text-sm font-medium text-[#F5EFE6]/80 transition hover:text-[#D6B16A]"
+        href="#contacts"
+        className="inline-flex rounded-full bg-[#D6B16A] px-8 py-4 text-center font-semibold text-[#101820] transition hover:bg-[#E4C37E]"
       >
-        Подробнее →
+        Забронировать
       </a>
     </div>
-  ))}
-</div>
-</div>
+
+    <p className="mt-5 max-w-sm text-sm leading-6 text-[#F5EFE6]/60">
+      Ответим в WhatsApp или Telegram в течение нескольких минут
+    </p>
+  </div>
 </section>
-<section className="bg-[#0D141B] px-6 py-24 text-[#F5EFE6]">
+<section id="routes" className="bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20">
   <div className="mx-auto max-w-7xl">
-    <div className="mb-14">
-      <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
-        Все экскурсии
+    <div className="mb-9">
+      <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[#D6B16A] md:text-sm">
+        Популярные маршруты
       </p>
 
-      <h2 className="text-4xl font-bold md:text-5xl">
-        Выберите свое направление
+      <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
+        Самые популярные экскурсии
       </h2>
     </div>
 
-    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid grid-cols-2 gap-3 md:gap-4">
+      {[
+        {
+          title: "Джилы-Су",
+          price: "от 3 700 ₽",
+          duration: "8–9 часов",
+          href: "/jily-su",
+        },
+        {
+          title: "Домбай",
+          price: "от 4 200 ₽",
+          duration: "12–13 часов",
+          href: "/dombay",
+        },
+        {
+          title: "Бермамыт",
+          price: "от 3 700 ₽",
+          duration: "8–9 часов",
+          href: "/bermamyt",
+        },
+        {
+          title: "Эльбрус",
+          price: "от 4 200 ₽",
+          duration: "12–13 часов",
+          href: "/elbrus",
+        },
+      ].map((tour, index) => (
+        <div
+          key={index}
+          className="rounded-[24px] border border-white/10 bg-white/[0.04] p-4 backdrop-blur-xl transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06] md:rounded-[28px] md:p-5"
+        >
+          <h3 className="text-lg font-semibold tracking-tight md:text-xl">
+            {tour.title}
+          </h3>
+
+          <div className="mt-3 space-y-1">
+            <p className="text-base font-medium text-[#D6B16A] md:text-lg">
+              {tour.price}
+            </p>
+
+            <p className="text-sm text-[#F5EFE6]/60">
+              {tour.duration}
+            </p>
+          </div>
+
+          <a
+            href={tour.href}
+            className="mt-5 inline-flex text-sm font-medium text-[#F5EFE6]/75 transition hover:text-[#D6B16A]"
+          >
+            Подробнее →
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+<section className="bg-[#0D141B] px-6 py-14 text-[#F5EFE6] md:py-20">
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-10">
+      <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[#D6B16A] md:text-sm">
+        Все экскурсии
+      </p>
+
+      <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
+        Выберите свое направление
+      </h2>
+
+      <p className="mt-4 max-w-2xl text-base leading-7 text-[#F5EFE6]/70">
+        Однодневные экскурсии по самым красивым местам Северного Кавказа.
+      </p>
+    </div>
+
+    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
       {[
         {
           title: "Джилы-Су",
@@ -318,7 +298,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       ].map((tour) => (
         <div
           key={tour.title}
-          className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md"
+          className="group overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06]"
         >
           <div className="overflow-hidden">
             <img
@@ -329,15 +309,17 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
           <div className="p-5 md:p-6">
-            <div className="flex items-center justify-between">
-              <h3 className="text-xl font-bold md:text-2xl">{tour.title}</h3>
+            <div className="flex items-center justify-between gap-4">
+              <h3 className="text-xl font-semibold tracking-tight md:text-2xl">
+                {tour.title}
+              </h3>
 
-              <span className="text-sm text-[#D6B16A]">
+              <span className="shrink-0 text-sm text-[#D6B16A]">
                 {tour.time}
               </span>
             </div>
 
-            <p className="mt-4 text-[#F5EFE6]/75">
+            <p className="mt-4 leading-7 text-[#F5EFE6]/70">
               {tour.desc}
             </p>
 
@@ -346,7 +328,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                 {tour.price}
               </p>
 
-              <button className="rounded-full border border-[#D6B16A]/40 px-5 py-2 text-sm font-medium text-[#F5EFE6] transition hover:bg-[#D6B16A] hover:text-[#101820]">
+              <button className="rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-[#F5EFE6]/85 transition-all duration-300 hover:border-[#D6B16A] hover:bg-[#D6B16A] hover:text-[#101820]">
                 Подробнее
               </button>
             </div>
@@ -357,140 +339,118 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   </div>
 </section>
 <section
-  className="bg-[#101820] px-6 py-24 text-[#F5EFE6]"
+  id="contacts"
+  className="bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20"
 >
-  <div className="mx-auto max-w-4xl rounded-[32px] border border-white/10 bg-white/5 p-8 backdrop-blur-xl md:p-12">
-    <div className="mb-10 text-center">
-      <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
-        ЗАЯВКА
+  <div className="mx-auto max-w-4xl rounded-[28px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl md:rounded-[32px] md:p-12">
+    <div className="mb-8 text-center md:mb-10">
+      <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[#D6B16A] md:text-sm">
+        Заявка
       </p>
 
-      <h2 className="text-3xl font-bold leading-tight md:text-5xl">
+      <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
         Подберем экскурсию под вас
       </h2>
 
-      <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#F5EFE6]/70 md:text-lg">
-        Оставьте заявку — мы поможем подобрать маршрут,
-        расскажем детали поездки и ответим на все вопросы.
+      <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#F5EFE6]/70">
+        Оставьте заявку — мы поможем выбрать маршрут, расскажем детали и ответим на вопросы.
       </p>
     </div>
 
-    <form onSubmit={handleFormSubmit} className="grid gap-5 md:grid-cols-2">
+    <form onSubmit={handleFormSubmit} className="grid gap-4 md:grid-cols-2">
       <input
-  type="text"
-  placeholder="Ваше имя *"
-  value={formData.name}
-  onChange={(e) =>
-    setFormData({ ...formData, name: e.target.value })
-  }
-  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
-/>
+        type="text"
+        placeholder="Ваше имя *"
+        value={formData.name}
+        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+        className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-[#F5EFE6] outline-none transition placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+      />
 
       <input
-  type="tel"
-  placeholder="Телефон *"
-  value={formData.phone}
-  onChange={(e) =>
-    setFormData({ ...formData, phone: e.target.value })
-  }
-  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
-/>
+        type="tel"
+        placeholder="Телефон *"
+        value={formData.phone}
+        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+        className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-[#F5EFE6] outline-none transition placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+      />
 
       <input
-  type="text"
-  placeholder="Где вас забрать?"
-  value={formData.pickup}
-  onChange={(e) =>
-    setFormData({ ...formData, pickup: e.target.value })
-  }
-  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
-/>
+        type="text"
+        placeholder="Где вас забрать?"
+        value={formData.pickup}
+        onChange={(e) => setFormData({ ...formData, pickup: e.target.value })}
+        className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-[#F5EFE6] outline-none transition placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+      />
 
       <input
-  type="text"
-  placeholder="Направление"
-  value={formData.direction}
-  onChange={(e) =>
-    setFormData({ ...formData, direction: e.target.value })
-  }
-  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
-/>
+        type="text"
+        placeholder="Направление"
+        value={formData.direction}
+        onChange={(e) => setFormData({ ...formData, direction: e.target.value })}
+        className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-[#F5EFE6] outline-none transition placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+      />
 
       <input
-  type="text"
-  placeholder="Желаемые даты"
-  value={formData.dates}
-  onChange={(e) =>
-    setFormData({ ...formData, dates: e.target.value })
-  }
-  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
-/>
-  <select
-  value={formData.format}
-  onChange={(e) =>
-    setFormData({ ...formData, format: e.target.value })
-  }
-  className={`rounded-2xl border border-white/10 bg-white/5 px-5 py-4 outline-none focus:border-[#D6B16A] ${
-    formData.format
-      ? "text-[#F5EFE6]"
-      : "text-[#F5EFE6]/40"
-  }`}
->
-  <option value="">Формат экскурсии</option>
+        type="text"
+        placeholder="Желаемые даты"
+        value={formData.dates}
+        onChange={(e) => setFormData({ ...formData, dates: e.target.value })}
+        className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-[#F5EFE6] outline-none transition placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
+      />
 
-  <option value="Групповая">Групповая</option>
-
-  <option value="Индивидуальная">
-    Индивидуальная
-  </option>
-
-  <option value="Подскажите лучший вариант">
-    Подскажите лучший вариант
-  </option>
-</select>
+      <select
+        value={formData.format}
+        onChange={(e) => setFormData({ ...formData, format: e.target.value })}
+        className={`rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 outline-none transition focus:border-[#D6B16A] ${
+          formData.format ? "text-[#F5EFE6]" : "text-[#F5EFE6]/40"
+        }`}
+      >
+        <option value="">Формат экскурсии</option>
+        <option value="Групповая">Групповая</option>
+        <option value="Индивидуальная">Индивидуальная</option>
+        <option value="Подскажите лучший вариант">
+          Подскажите лучший вариант
+        </option>
+      </select>
 
       <input
-  type="number"
-  placeholder="Количество человек"
-  value={formData.people}
-  onChange={(e) =>
-    setFormData({ ...formData, people: e.target.value })
-  }
-  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A] md:col-span-2"
-/>
+        type="number"
+        placeholder="Количество человек"
+        value={formData.people}
+        onChange={(e) => setFormData({ ...formData, people: e.target.value })}
+        className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-[#F5EFE6] outline-none transition placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A] md:col-span-2"
+      />
 
       <textarea
-  placeholder="Комментарий"
-  rows={5}
-  value={formData.comment}
-  onChange={(e) =>
-    setFormData({ ...formData, comment: e.target.value })
-  }
-  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-[#F5EFE6] outline-none placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A] md:col-span-2"
-/>
+        placeholder="Комментарий"
+        rows={4}
+        value={formData.comment}
+        onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
+        className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-[#F5EFE6] outline-none transition placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A] md:col-span-2"
+      />
 
       <button
         type="submit"
-        className="rounded-2xl bg-[#D6B16A] px-8 py-5 text-lg font-semibold text-[#101820] transition hover:scale-[1.02] hover:bg-[#E7C98C] md:col-span-2"
+        className="rounded-2xl bg-[#D6B16A] px-8 py-4 text-base font-semibold text-[#101820] transition-all duration-300 hover:bg-[#E7C98C] md:col-span-2"
       >
         Оставить заявку
       </button>
     </form>
   </div>
 </section>
-<section className="bg-[#0D141B] px-6 py-20 text-[#F5EFE6]">
+<section className="bg-[#0D141B] px-6 py-14 text-[#F5EFE6] md:py-20">
   <div className="mx-auto max-w-7xl">
-    <div className="mb-12 max-w-3xl">
-      <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
+    <div className="mb-10 max-w-3xl">
+      <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[#D6B16A] md:text-sm">
         Почему выбирают нас
       </p>
 
-      <h2 className="text-3xl font-bold leading-tight md:text-5xl">
+      <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
         Путешествия, в которые хочется возвращаться
       </h2>
     </div>
 
-    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
       {[
         {
           icon: "🚙",
@@ -519,11 +479,11 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       ].map((item) => (
         <div
           key={item.title}
-          className="rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition hover:border-[#D6B16A]/40 hover:bg-white/[0.07] md:p-6"
+          className="rounded-[24px] border border-white/10 bg-white/[0.04] p-4 backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06] md:rounded-[28px] md:p-5"
         >
-          <div className="text-2xl md:text-4xl">{item.icon}</div>
+          <div className="text-2xl md:text-3xl">{item.icon}</div>
 
-          <h3 className="mt-3 text-base font-semibold leading-snug md:mt-5 md:text-xl">
+          <h3 className="mt-3 text-sm font-semibold leading-snug tracking-tight text-[#F5EFE6]/90 md:text-lg">
             {item.title}
           </h3>
         </div>
@@ -534,20 +494,24 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
 <section
   id="how"
-  className="bg-[#101820] px-6 py-20 text-[#F5EFE6]"
+  className="bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20"
 >
   <div className="mx-auto max-w-7xl">
-    <div className="mb-12 max-w-3xl">
-      <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
+    <div className="mb-10 max-w-3xl">
+      <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[#D6B16A] md:text-sm">
         Как проходит поездка
       </p>
 
-      <h2 className="text-3xl font-bold leading-tight md:text-5xl">
+      <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
         Все просто и продумано
       </h2>
+
+      <p className="mt-4 max-w-2xl text-base leading-7 text-[#F5EFE6]/70">
+        От заявки до возвращения обратно — мы сопровождаем вас на каждом этапе поездки.
+      </p>
     </div>
 
-    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4 md:gap-4">
       {[
         {
           icon: "📝",
@@ -580,15 +544,15 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       ].map((step, index) => (
         <div
           key={step.title}
-          className="relative rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-md md:p-6"
+          className="relative rounded-[24px] border border-white/10 bg-white/[0.04] p-4 backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06] md:rounded-[28px] md:p-5"
         >
-          <div className="absolute right-5 top-5 text-xs text-[#D6B16A]/60">
+          <div className="absolute right-4 top-4 text-[11px] tracking-[0.2em] text-[#D6B16A]/45">
             0{index + 1}
           </div>
 
-          <div className="text-2xl md:text-4xl">{step.icon}</div>
+          <div className="text-2xl md:text-3xl">{step.icon}</div>
 
-          <h3 className="mt-3 text-sm font-semibold leading-snug md:mt-5 md:text-lg">
+          <h3 className="mt-3 pr-6 text-sm font-semibold leading-snug tracking-tight text-[#F5EFE6]/90 md:text-base">
             {step.title}
           </h3>
         </div>
@@ -598,42 +562,71 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 </section>
 <section
   id="faq"
-  className="bg-[#0D141B] px-6 py-24 text-[#F5EFE6]"
+  className="bg-[#0D141B] px-6 py-14 text-[#F5EFE6] md:py-20"
 >
   <div className="mx-auto max-w-5xl">
-    <div className="mb-16 max-w-3xl">
-      <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
+    <div className="mb-10 max-w-3xl">
+      <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[#D6B16A] md:text-sm">
         FAQ
       </p>
 
-      <h2 className="text-4xl font-bold leading-tight md:text-5xl">
+      <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
         Частые вопросы
       </h2>
+
+      <p className="mt-4 max-w-2xl text-base leading-7 text-[#F5EFE6]/70">
+        Собрали ответы на самые популярные вопросы о поездках и бронировании.
+      </p>
     </div>
 
-    <div className="space-y-4">
+    <div className="space-y-3 md:space-y-4">
       {[
-        ["Что входит в стоимость?", "В стоимость входит трансфер, сопровождение водителя-гида и посещение всех основных локаций маршрута."],
-        ["Что не входит в стоимость?", "Питание, экосборы, канатные дороги и личные расходы оплачиваются отдельно."],
-        ["Можно ли поехать с детьми?", "Да, большинство маршрутов подходят для поездок с детьми. Перед бронированием мы поможем подобрать наиболее комфортный вариант."],
-        ["Что взять с собой?", "Рекомендуем взять с собой теплую одежду, удобную обувь, документы, наличные деньги, солнцезащитные очки и воду."],
-        ["Насколько безопасны поездки?", "Мы работаем только с опытными водителями-гидами и проверенными маршрутами. Безопасность туристов для нас всегда в приоритете."],
-        ["Что будет, если испортится погода?", "Если погодные условия будут небезопасными для поездки, мы заранее свяжемся с вами и предложим перенос даты или альтернативный маршрут."],
-        ["Как забронировать экскурсию?", "Оставьте заявку на сайте или напишите нам в WhatsApp / Telegram — мы быстро свяжемся с вами и подтвердим бронь."],
-        ["За сколько дней лучше бронировать поездку?", "В сезон рекомендуем бронировать экскурсии заранее, особенно популярные направления и индивидуальные поездки."],
+        [
+          "Что входит в стоимость?",
+          "В стоимость входит трансфер, сопровождение водителя-гида и посещение всех основных локаций маршрута.",
+        ],
+        [
+          "Что не входит в стоимость?",
+          "Питание, экосборы, канатные дороги и личные расходы оплачиваются отдельно.",
+        ],
+        [
+          "Можно ли поехать с детьми?",
+          "Да, большинство маршрутов подходят для поездок с детьми. Перед бронированием мы поможем подобрать наиболее комфортный вариант.",
+        ],
+        [
+          "Что взять с собой?",
+          "Рекомендуем взять с собой теплую одежду, удобную обувь, документы, наличные деньги, солнцезащитные очки и воду.",
+        ],
+        [
+          "Насколько безопасны поездки?",
+          "Мы работаем только с опытными водителями-гидами и проверенными маршрутами. Безопасность туристов для нас всегда в приоритете.",
+        ],
+        [
+          "Что будет, если испортится погода?",
+          "Если погодные условия будут небезопасными для поездки, мы заранее свяжемся с вами и предложим перенос даты или альтернативный маршрут.",
+        ],
+        [
+          "Как забронировать экскурсию?",
+          "Оставьте заявку на сайте или напишите нам в WhatsApp / Telegram — мы быстро свяжемся с вами и подтвердим бронь.",
+        ],
+        [
+          "За сколько дней лучше бронировать поездку?",
+          "В сезон рекомендуем бронировать экскурсии заранее, особенно популярные направления и индивидуальные поездки.",
+        ],
       ].map(([question, answer]) => (
         <details
           key={question}
-          className="group rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md"
+          className="group rounded-[24px] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06] md:rounded-[28px] md:p-6"
         >
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-xl font-semibold">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base font-semibold tracking-tight text-[#F5EFE6]/90 md:text-xl">
             {question}
-            <span className="text-[#D6B16A] transition group-open:rotate-45">
+
+            <span className="shrink-0 text-[#D6B16A] transition duration-300 group-open:rotate-45">
               +
             </span>
           </summary>
 
-          <p className="mt-5 leading-8 text-[#F5EFE6]/75">
+          <p className="mt-4 max-w-3xl leading-7 text-[#F5EFE6]/70 md:mt-5">
             {answer}
           </p>
         </details>
@@ -641,29 +634,26 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </section>
-<section
-  id="contacts"
-  className="relative overflow-hidden bg-[#101820] px-6 py-24 text-[#F5EFE6]"
->
-  <div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-25" />
-  <div className="absolute inset-0 bg-[#101820]/80" />
+<section className="relative overflow-hidden bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20">
+  <div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-20" />
+  <div className="absolute inset-0 bg-[#101820]/85" />
 
   <div className="relative z-10 mx-auto max-w-7xl">
-    <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+    <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
       <div>
-        <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
+        <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[#D6B16A] md:text-sm">
           Контакты
         </p>
 
-        <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+        <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
           Готовы отправиться в путешествие?
         </h2>
 
-        <p className="mt-6 max-w-xl text-lg leading-8 text-[#F5EFE6]/75">
-          Поможем подобрать маршрут, расскажем детали поездки и ответим на любые вопросы.
+        <p className="mt-4 max-w-xl text-base leading-7 text-[#F5EFE6]/70">
+          Напишите нам — поможем выбрать маршрут и расскажем все детали поездки.
         </p>
 
-        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
             href="https://wa.me/79298606885"
             target="_blank"
@@ -675,32 +665,32 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           <a
             href="https://t.me/tvoicompas26"
             target="_blank"
-            className="rounded-full border border-[#F5EFE6]/40 px-8 py-4 text-center font-semibold text-[#F5EFE6] transition hover:bg-[#F5EFE6]/10"
+            className="rounded-full border border-white/15 px-8 py-4 text-center font-semibold text-[#F5EFE6]/85 transition hover:border-white/25 hover:bg-white/10"
           >
             Написать в Telegram
           </a>
         </div>
       </div>
 
-      <div className="rounded-[36px] border border-white/10 bg-white/5 p-8 backdrop-blur-md">
-        <div className="space-y-6">
+      <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md md:rounded-[32px] md:p-8">
+        <div className="space-y-5">
           <div>
-            <p className="text-sm text-[#F5EFE6]/50">Телефон / WhatsApp</p>
-            <p className="mt-2 text-2xl font-semibold">
+            <p className="text-sm text-[#F5EFE6]/45">Телефон / WhatsApp</p>
+            <p className="mt-2 text-xl font-semibold md:text-2xl">
               +7 (929) 860-68-85
             </p>
           </div>
 
           <div>
-            <p className="text-sm text-[#F5EFE6]/50">Telegram</p>
-            <p className="mt-2 text-2xl font-semibold">
+            <p className="text-sm text-[#F5EFE6]/45">Telegram</p>
+            <p className="mt-2 text-xl font-semibold md:text-2xl">
               @tvoicompas26
             </p>
           </div>
 
           <div>
-            <p className="text-sm text-[#F5EFE6]/50">Instagram</p>
-            <p className="mt-2 text-2xl font-semibold">
+            <p className="text-sm text-[#F5EFE6]/45">Instagram</p>
+            <p className="mt-2 text-xl font-semibold md:text-2xl">
               tvoi_compass
             </p>
           </div>
@@ -708,13 +698,13 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       </div>
     </div>
 
-    <footer className="mt-20 border-t border-white/10 pt-8">
-      <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+    <footer className="mt-14 border-t border-white/10 pt-8 md:mt-20">
+      <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center gap-4">
           <img
-            src="/images/logo.png"
+            src="/images/logo-round.png"
             alt="Твой Компас"
-            className="h-12 w-auto"
+            className="h-12 w-12 rounded-full object-cover"
           />
 
           <div>

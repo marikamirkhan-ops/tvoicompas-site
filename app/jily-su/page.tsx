@@ -11,7 +11,7 @@ export default function JilySuPage() {
       Джилы-Су
     </p>
 
-    <h1 className="max-w-4xl text-5xl font-bold leading-tight md:text-7xl">
+    <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-7xl">
       Экскурсия на Джилы-Су
     </h1>
 
@@ -36,21 +36,21 @@ export default function JilySuPage() {
         href="https://wa.me/79298606885"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex rounded-full bg-[#D6B16A] px-8 py-4 text-lg font-semibold text-[#101820] transition hover:scale-105 hover:bg-[#E7C98C]"
+        className="inline-flex rounded-full bg-[#D6B16A] px-8 py-4 text-base font-semibold text-[#101820] transition hover:bg-[#E7C98C]"
       >
         Забронировать
       </a>
     </div>
   </div>
 </section>
-<section className="bg-[#101820] px-6 py-20">
+<section className="bg-[#101820] px-6 py-14 md:py-20">
   <div className="mx-auto max-w-7xl">
     <div className="mb-12">
       <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
         СТОИМОСТЬ
       </p>
 
-      <h2 className="text-3xl font-bold md:text-5xl">
+      <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
         Стоимость поездки
       </h2>
     </div>
@@ -110,14 +110,14 @@ export default function JilySuPage() {
     </div>
   </div>
 </section>
-<section className="bg-[#101820] px-6 py-24">
+<section className="bg-[#101820] px-6 py-14 md:py-20">
   <div className="mx-auto max-w-7xl">
     <div className="mb-10">
       <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
         ГАЛЕРЕЯ
       </p>
 
-      <h2 className="text-3xl font-bold md:text-5xl">
+      <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
         Атмосфера маршрута
       </h2>
     </div>
@@ -160,14 +160,14 @@ export default function JilySuPage() {
     </div>
   </div>
 </section>
-<section className="bg-[#101820] px-6 py-24">
+<section className="bg-[#101820] px-6 py-14 md:py-20">
   <div className="mx-auto max-w-5xl">
     <div className="mb-14">
       <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
         ПРОГРАММА
       </p>
 
-      <h2 className="text-3xl font-bold md:text-5xl">
+      <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
         Программа поездки
       </h2>
     </div>
@@ -219,11 +219,11 @@ export default function JilySuPage() {
           className="border-b border-white/10 pb-10 last:border-none"
         >
           <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-            <h3 className="text-2xl font-semibold md:w-[35%]">
+            <h3 className="text-xl font-semibold tracking-tight md:w-[35%]">
               {item.title}
             </h3>
 
-            <p className="max-w-2xl text-lg leading-8 text-[#F5EFE6]/70 md:w-[60%]">
+            <p className="max-w-2xl text-base leading-7 text-[#F5EFE6]/70 md:w-[60%]">
               {item.text}
             </p>
           </div>
@@ -232,14 +232,14 @@ export default function JilySuPage() {
     </div>
   </div>
 </section>
-<section className="bg-[#101820] px-6 py-24">
+<section className="bg-[#101820] px-6 py-14 md:py-20">
   <div className="mx-auto max-w-5xl">
     <div className="mb-14">
       <p className="mb-3 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
         FAQ
       </p>
 
-      <h2 className="text-3xl font-bold md:text-5xl">
+      <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
         Частые вопросы
       </h2>
     </div>
