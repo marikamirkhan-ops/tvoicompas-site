@@ -37,15 +37,11 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
 <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#101820]/45 backdrop-blur-md">
   <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-    <a
-  href="#"
-  aria-label="Наверх"
-  className="rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-md transition hover:bg-white/10"
->
+    <a href="#" aria-label="Наверх">
   <img
-    src="/images/logo.png"
+    src="/images/logo-round.png"
     alt="Твой Компас"
-    className="h-12 w-auto"
+    className="h-14 w-14 rounded-full object-cover"
   />
 </a>
 
