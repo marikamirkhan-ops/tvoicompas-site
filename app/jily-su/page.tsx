@@ -1,7 +1,13 @@
+"use client";
+
+import { useRef, useState } from "react";
+
 export default function JilySuPage() {
+  const [currentImage, setCurrentImage] = useState(0);
+  const galleryRef = useRef<HTMLDivElement>(null);
   return (
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
-      <section className="relative flex min-h-screen items-center overflow-hidden px-6">
+      <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20">
   <div className="absolute inset-0 bg-[url('/images/jilysu-main.jpg')] bg-cover bg-center opacity-60" />
   <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/80 to-transparent" />
   <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-[#101820]/40" />
@@ -122,7 +128,15 @@ export default function JilySuPage() {
       </h2>
     </div>
 
-    <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+    <div
+  ref={galleryRef}
+  onScroll={(e) => {
+    const container = e.currentTarget;
+    const index = Math.round(container.scrollLeft / container.offsetWidth);
+    setCurrentImage(index);
+  }}
+  className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+>
       {[
         "/images/jilysu-1.jpg",
         "/images/jilysu-2.jpg",
@@ -148,17 +162,39 @@ export default function JilySuPage() {
       ))}
     </div>
 
-    <div className="mt-8 flex justify-center gap-3">
-      <div className="h-2.5 w-2.5 rounded-full bg-[#D6B16A]" />
-      <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
-      <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
-      <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
-      <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
-      <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
-      <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
-      <div className="h-2.5 w-2.5 rounded-full bg-white/20" />
-    </div>
-  </div>
+    <div className="mt-6 flex items-center justify-center gap-2">
+  {[
+    "/images/jilysu-1.jpg",
+    "/images/jilysu-2.jpg",
+    "/images/jilysu-3.jpg",
+    "/images/jilysu-4.jpg",
+    "/images/jilysu-5.jpg",
+    "/images/jilysu-6.jpg",
+    "/images/jilysu-7.jpg",
+    "/images/jilysu-8.jpg",
+  ].map((_, index) => (
+    <button
+      key={index}
+      onClick={() => {
+        const container = galleryRef.current;
+        if (!container) return;
+
+        container.scrollTo({
+          left: container.offsetWidth * index,
+          behavior: "smooth",
+        });
+
+        setCurrentImage(index);
+      }}
+      className={`h-2 rounded-full transition-all duration-300 ${
+        currentImage === index
+          ? "w-8 bg-[#D6B16A]"
+          : "w-2 bg-white/25 hover:bg-white/50"
+      }`}
+      aria-label={`Фото ${index + 1}`}
+    />
+  ))}
+</div>
 </section>
 <section className="bg-[#101820] px-6 py-14 md:py-20">
   <div className="mx-auto max-w-5xl">
@@ -302,7 +338,7 @@ export default function JilySuPage() {
       ТВОЙ КОМПАС
     </p>
 
-    <h2 className="text-3xl font-bold leading-tight md:text-5xl">
+    <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
       Готовы отправиться
       <br />
       в путешествие?
@@ -318,7 +354,7 @@ export default function JilySuPage() {
         href="https://wa.me/79298606885"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex rounded-full bg-[#D6B16A] px-8 py-4 text-lg font-semibold text-[#101820] transition hover:scale-105 hover:bg-[#E7C98C]"
+        className="inline-flex rounded-full bg-[#D6B16A] px-8 py-4 text-base font-semibold text-[#101820] transition hover:bg-[#E7C98C]"
       >
         Забронировать
       </a>
