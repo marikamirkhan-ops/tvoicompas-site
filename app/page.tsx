@@ -172,96 +172,64 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       </div>
     </div>
 
-    <div className="grid gap-6 md:grid-cols-2">
-      <div className="group relative overflow-hidden rounded-3xl">
-        <img
-          src="/images/jily-su.jpg"
-          alt="Джилы-Су"
-          className="h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
-        />
+    <div className="grid grid-cols-2 gap-4">
+  {[
+    {
+      title: "Джилы-Су",
+      price: "от 3 700 ₽",
+      duration: "8–9 часов",
+      href: "/jily-su",
+    },
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-[#101820]/40 to-transparent" />
+    {
+      title: "Домбай",
+      price: "от 4 200 ₽",
+      duration: "12–13 часов",
+      href: "/dombay",
+    },
 
-        <div className="absolute bottom-0 left-0 z-10 p-8">
-          <h3 className="text-3xl font-bold">Джилы-Су</h3>
+    {
+      title: "Бермамыт",
+      price: "от 3 700 ₽",
+      duration: "8–9 часов",
+      href: "/bermamyt",
+    },
 
-          <p className="mt-3 max-w-md text-[#F5EFE6]/80">
-            Самая красивая дорога в России, водопады и панорамы Эльбруса.
-          </p>
+    {
+      title: "Эльбрус",
+      price: "от 4 200 ₽",
+      duration: "12–13 часов",
+      href: "/elbrus",
+    },
+  ].map((tour, index) => (
+    <div
+      key={index}
+      className="rounded-[28px] border border-white/10 bg-white/5 p-5 backdrop-blur-xl"
+    >
+      <h3 className="text-xl font-semibold">
+        {tour.title}
+      </h3>
 
-          <p className="mt-4 text-sm text-[#D6B16A]">
-            8–9 часов · от 3 700 ₽
-          </p>
-        </div>
+      <div className="mt-4 space-y-1">
+        <p className="text-lg font-medium text-[#D6B16A]">
+          {tour.price}
+        </p>
+
+        <p className="text-sm text-[#F5EFE6]/60">
+          {tour.duration}
+        </p>
       </div>
 
-      <div className="group relative overflow-hidden rounded-3xl">
-        <img
-          src="/images/bermamut.jpg"
-          alt="Бермамыт"
-          className="h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-[#101820]/40 to-transparent" />
-
-        <div className="absolute bottom-0 left-0 z-10 p-8">
-          <h3 className="text-3xl font-bold">Бермамыт</h3>
-
-          <p className="mt-3 max-w-md text-[#F5EFE6]/80">
-            Кавказский гранд-каньон и лучшие виды на Эльбрус.
-          </p>
-
-          <p className="mt-4 text-sm text-[#D6B16A]">
-            6–7 часов · от 3 700 ₽
-          </p>
-        </div>
-      </div>
-
-      <div className="group relative overflow-hidden rounded-3xl">
-        <img
-          src="/images/dombay.jpg"
-          alt="Домбай"
-          className="h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-[#101820]/40 to-transparent" />
-
-        <div className="absolute bottom-0 left-0 z-10 p-8">
-          <h3 className="text-3xl font-bold">Домбай</h3>
-
-          <p className="mt-3 max-w-md text-[#F5EFE6]/80">
-            Жемчужина Северного Кавказа.
-          </p>
-
-          <p className="mt-4 text-sm text-[#D6B16A]">
-            12–14 часов · от 4 200 ₽
-          </p>
-        </div>
-      </div>
-
-      <div className="group relative overflow-hidden rounded-3xl">
-        <img
-          src="/images/elbrus.jpg"
-          alt="Эльбрус"
-          className="h-[420px] w-full object-cover transition duration-700 group-hover:scale-105"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-[#101820]/40 to-transparent" />
-
-        <div className="absolute bottom-0 left-0 z-10 p-8">
-          <h3 className="text-3xl font-bold">Эльбрус</h3>
-
-          <p className="mt-3 max-w-md text-[#F5EFE6]/80">
-            Самая высокая вершина России и Европы.
-          </p>
-
-          <p className="mt-4 text-sm text-[#D6B16A]">
-            12–14 часов · от 4 200 ₽
-          </p>
-        </div>
-      </div>
+      <a
+        href={tour.href}
+        className="mt-5 inline-flex text-sm font-medium text-[#F5EFE6]/80 transition hover:text-[#D6B16A]"
+      >
+        Подробнее →
+      </a>
     </div>
-  </div>
+  ))}
+</div>
+</div>
 </section>
 <section className="bg-[#0D141B] px-6 py-24 text-[#F5EFE6]">
   <div className="mx-auto max-w-7xl">
@@ -632,7 +600,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         ["Что входит в стоимость?", "В стоимость входит трансфер, сопровождение водителя-гида и посещение всех основных локаций маршрута."],
         ["Что не входит в стоимость?", "Питание, экосборы, канатные дороги и личные расходы оплачиваются отдельно."],
         ["Можно ли поехать с детьми?", "Да, большинство маршрутов подходят для поездок с детьми. Перед бронированием мы поможем подобрать наиболее комфортный вариант."],
-        ["Что взять с собой?", "Рекомендуем взять теплую одежду, удобную обувь, наличные деньги, солнцезащитные очки и воду."],
+        ["Что взять с собой?", "Рекомендуем взять с собой теплую одежду, удобную обувь, документы, наличные деньги, солнцезащитные очки и воду."],
         ["Насколько безопасны поездки?", "Мы работаем только с опытными водителями-гидами и проверенными маршрутами. Безопасность туристов для нас всегда в приоритете."],
         ["Что будет, если испортится погода?", "Если погодные условия будут небезопасными для поездки, мы заранее свяжемся с вами и предложим перенос даты или альтернативный маршрут."],
         ["Как забронировать экскурсию?", "Оставьте заявку на сайте или напишите нам в WhatsApp / Telegram — мы быстро свяжемся с вами и подтвердим бронь."],
