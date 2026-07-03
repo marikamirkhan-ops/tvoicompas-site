@@ -420,15 +420,19 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     setFormData({ ...formData, format: e.target.value })
   }
   className={`rounded-2xl border border-white/10 bg-white/5 px-5 py-4 outline-none focus:border-[#D6B16A] ${
-    formData.format ? "text-[#F5EFE6]" : "text-[#F5EFE6]/40"
+    formData.format
+      ? "text-[#F5EFE6]"
+      : "text-[#F5EFE6]/40"
   }`}
 >
-  <option value="" disabled hidden>
-    Формат экскурсии
-  </option>
+  <option value="">Формат экскурсии</option>
 
   <option value="Групповая">Групповая</option>
-  <option value="Индивидуальная">Индивидуальная</option>
+
+  <option value="Индивидуальная">
+    Индивидуальная
+  </option>
+
   <option value="Подскажите лучший вариант">
     Подскажите лучший вариант
   </option>
