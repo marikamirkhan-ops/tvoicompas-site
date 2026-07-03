@@ -36,7 +36,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   return (
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
 <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#101820]/45 backdrop-blur-md">
-  <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+  <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6">
     <a href="#" aria-label="Наверх">
   <img
     src="/images/logo-round.png"
