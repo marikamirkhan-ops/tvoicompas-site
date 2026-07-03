@@ -1,7 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";;
 export default function Home() {
+const [showScrollTop, setShowScrollTop] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setShowScrollTop(window.scrollY > 600);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 const [formData, setFormData] = useState({
   name: "",
@@ -722,13 +733,20 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     </footer>
   </div>
 </section>
-<a
-  href="#"
-  aria-label="Наверх"
-  className="fixed bottom-24 right-6 z-[9999] flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-[#101820]/80 text-2xl text-[#D6B16A] shadow-2xl backdrop-blur-md transition hover:scale-110"
->
-  ↑
-</a>
+{showScrollTop && (
+  <button
+    onClick={() =>
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      })
+    }
+    aria-label="Наверх"
+    className="fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-[#101820]/70 text-lg text-white/80 backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:text-[#D6B16A]"
+  >
+    ⌃
+  </button>
+)}
   <a
   href="https://wa.me/79298606885"
   target="_blank"
