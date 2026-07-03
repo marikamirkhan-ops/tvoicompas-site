@@ -161,8 +161,9 @@ export default function JilySuPage() {
         </div>
       ))}
     </div>
+  </div>
 
-    <div className="mt-6 flex items-center justify-center gap-2">
+  <div className="mt-6 flex items-center justify-center gap-2">
   {[
     "/images/jilysu-1.jpg",
     "/images/jilysu-2.jpg",
