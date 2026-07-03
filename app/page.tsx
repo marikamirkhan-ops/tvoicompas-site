@@ -722,6 +722,13 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     </footer>
   </div>
 </section>
+<a
+  href="#"
+  aria-label="Наверх"
+  className="fixed bottom-24 right-6 z-[9999] flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-[#101820]/80 text-2xl text-[#D6B16A] shadow-2xl backdrop-blur-md transition hover:scale-110"
+>
+  ↑
+</a>
   <a
   href="https://wa.me/79298606885"
   target="_blank"
