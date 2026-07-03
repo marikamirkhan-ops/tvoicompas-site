@@ -742,7 +742,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       })
     }
     aria-label="Наверх"
-    className="fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-[#101820]/70 text-lg text-white/80 backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:text-[#D6B16A]"
+    className="fixed bottom-24 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-[#101820]/70 text-lg text-white/80 backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:text-[#D6B16A]"
   >
     ⌃
   </button>
