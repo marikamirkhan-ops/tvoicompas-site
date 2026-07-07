@@ -13,6 +13,13 @@ export default function JilySuPage() {
   <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-[#101820]/40" />
 
   <div className="relative z-10 mx-auto w-full max-w-7xl">
+    <a
+      href="/#routes"
+      className="mb-6 inline-flex text-sm font-medium text-[#F5EFE6]/65 transition hover:text-[#D6B16A]"
+>
+      ← Все экскурсии
+    </a>
+    
     <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
       Чечня
     </p>

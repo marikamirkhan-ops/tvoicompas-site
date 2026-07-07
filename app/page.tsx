@@ -147,7 +147,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     </p>
   </div>
 </section>
-<section id="routes" className="scroll-mt-12 bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20">
+<section id="routes" className="scroll-mt-10 bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20">
   <div className="mx-auto max-w-7xl">
     <div className="mb-9">
       <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[#D6B16A] md:text-sm">
@@ -507,7 +507,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
 <section
   id="how"
-  className="scroll-mt-12 bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20"
+  className="scroll-mt-10 bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20"
 >
   <div className="mx-auto max-w-7xl">
     <div className="mb-10 max-w-3xl">
@@ -575,7 +575,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 </section>
 <section
   id="faq"
-  className="scroll-mt-12 bg-[#0D141B] px-6 py-14 text-[#F5EFE6] md:py-20"
+  className="scroll-mt-10 bg-[#0D141B] px-6 py-14 text-[#F5EFE6] md:py-20"
 >
   <div className="mx-auto max-w-5xl">
     <div className="mb-10 max-w-3xl">
@@ -649,7 +649,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 </section>
 <section
   id="contacts"
-  className="scroll-mt-12 relative overflow-hidden bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20"
+  className="scroll-mt-10 relative overflow-hidden bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20"
 >
   <div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-20" />
   <div className="absolute inset-0 bg-[#101820]/85" />
