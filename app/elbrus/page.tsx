@@ -130,10 +130,14 @@ export default function JilySuPage() {
 
     <div
   ref={galleryRef}
-  onScroll={(e) => {
+  onScroll={(e: React.UIEvent<HTMLDivElement>) => {
     const container = e.currentTarget;
-    const index = Math.round(container.scrollLeft / container.offsetWidth);
-    setCurrentImage(index);
+
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    const progress = container.scrollLeft / maxScroll;
+    const index = Math.round(progress * 7);
+
+    setCurrentImage(Math.min(index, 7));
   }}
   className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
 >
@@ -246,9 +250,6 @@ export default function JilySuPage() {
         >
           <div className="flex flex-col gap-5 md:flex-row md:justify-between">
             <div className="md:w-[35%]">
-              <p className="mb-2 text-sm text-[#D6B16A]">
-                0{index + 1}
-              </p>
 
               <h3 className="text-xl font-semibold tracking-tight">
                 {step.title}
