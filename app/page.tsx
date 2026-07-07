@@ -206,6 +206,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
           <Link
             href={tour.href}
+            scroll={true}
             className="mt-5 inline-flex text-sm font-medium text-[#F5EFE6]/75 transition hover:text-[#D6B16A]"
 >
             Подробнее →
@@ -340,6 +341,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
               <Link
               href={tour.href}
+              scroll={true}
               className="rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-[#F5EFE6]/85 transition-all duration-300 hover:border-[#D6B16A] hover:bg-[#D6B16A] hover:text-[#101820]"
 >
               Подробнее
