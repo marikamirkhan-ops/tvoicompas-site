@@ -14,7 +14,7 @@ export default function JilySuPage() {
 
   <div className="relative z-10 mx-auto w-full max-w-7xl">
     <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
-      "Эльбрус"
+      Эльбрус
     </p>
 
     <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-7xl">

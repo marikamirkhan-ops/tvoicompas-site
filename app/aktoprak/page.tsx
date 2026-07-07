@@ -14,7 +14,7 @@ export default function JilySuPage() {
 
   <div className="relative z-10 mx-auto w-full max-w-7xl">
     <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#D6B16A]">
-      "Актопрак"
+      Актопрак
     </p>
 
     <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-7xl">
@@ -262,9 +262,6 @@ export default function JilySuPage() {
         >
           <div className="flex flex-col gap-5 md:flex-row md:justify-between">
             <div className="md:w-[35%]">
-              <p className="mb-2 text-sm text-[#D6B16A]">
-                0{index + 1}
-              </p>
 
               <h3 className="text-xl font-semibold tracking-tight">
                 {step.title}
