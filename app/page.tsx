@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 export default function Home() {
 const [showScrollTop, setShowScrollTop] = useState(false);
@@ -203,12 +204,12 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
             </p>
           </div>
 
-          <a
+          <Link
             href={tour.href}
             className="mt-5 inline-flex text-sm font-medium text-[#F5EFE6]/75 transition hover:text-[#D6B16A]"
-          >
+>
             Подробнее →
-          </a>
+          </Link>
         </div>
       ))}
     </div>
@@ -238,6 +239,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           desc: "Самая красивая дорога в России.",
           price: "от 3 700 ₽",
           time: "8–9 часов",
+          href: "/jily-su",
         },
         {
           title: "Бермамыт",
@@ -245,6 +247,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           desc: "Лучшие виды на Эльбрус.",
           price: "от 3 700 ₽",
           time: "6–7 часов",
+          href: "/bermamyt",
         },
         {
           title: "Домбай",
@@ -252,6 +255,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           desc: "Жемчужина Северного Кавказа.",
           price: "от 4 200 ₽",
           time: "12–14 часов",
+          href: "/dombay",
         },
         {
           title: "Эльбрус",
@@ -259,6 +263,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           desc: "Самая высокая вершина Европы.",
           price: "от 4 200 ₽",
           time: "12–14 часов",
+          href: "/elbrus",
         },
         {
           title: "Актопрак",
@@ -266,6 +271,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           desc: "Красочные виды и горные перевалы.",
           price: "от 4 200 ₽",
           time: "12–14 часов",
+          href: "/aktoprak",
         },
         {
           title: "Архыз",
@@ -273,6 +279,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           desc: "Древние храмы и горные озера.",
           price: "от 4 700 ₽",
           time: "12–14 часов",
+          href: "/arkhyz",
         },
         {
           title: "Верхняя Балкария",
@@ -280,6 +287,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           desc: "Древняя колыбель Балкарии.",
           price: "от 5 000 ₽",
           time: "12–14 часов",
+          href: "/balkaria",
         },
         {
           title: "Северная Осетия",
@@ -287,6 +295,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           desc: "Ущелья, храмы и город мертвых.",
           price: "от 5 500 ₽",
           time: "12–14 часов",
+          href: "/osetia",
         },
         {
           title: "Чечня",
@@ -294,6 +303,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           desc: "Три города за один день.",
           price: "от 6 000 ₽",
           time: "12–14 часов",
+          href: "/chechnya",
         },
       ].map((tour) => (
         <div
@@ -328,9 +338,12 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                 {tour.price}
               </p>
 
-              <button className="rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-[#F5EFE6]/85 transition-all duration-300 hover:border-[#D6B16A] hover:bg-[#D6B16A] hover:text-[#101820]">
-                Подробнее
-              </button>
+              <Link
+              href={tour.href}
+              className="rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-[#F5EFE6]/85 transition-all duration-300 hover:border-[#D6B16A] hover:bg-[#D6B16A] hover:text-[#101820]"
+>
+              Подробнее
+              </Link>
             </div>
           </div>
         </div>
