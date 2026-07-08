@@ -412,15 +412,19 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         onChange={(e) => setFormData({ ...formData, dates: e.target.value })}
         className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-[#F5EFE6] outline-none transition placeholder:text-[#F5EFE6]/40 focus:border-[#D6B16A]"
       />
-
+      
+      <label htmlFor="format" className="sr-only">
+        Формат экскурсии
+      </label>
+      
       <select
+        id="format"
         value={formData.format}
         onChange={(e) => setFormData({ ...formData, format: e.target.value })}
         className={`rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 outline-none transition focus:border-[#D6B16A] ${
-          formData.format ? "text-[#F5EFE6]" : "text-[#F5EFE6]/40"
+          formData.format ? "text-[#F5EFE6]" : "text-[#F5EFE6]/60"
         }`}
       >
-        <option value="">Формат экскурсии</option>
         <option value="Групповая">Групповая</option>
         <option value="Индивидуальная">Индивидуальная</option>
         <option value="Подскажите лучший вариант">
@@ -561,7 +565,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           key={step.title}
           className="relative rounded-[24px] border border-white/10 bg-white/[0.04] p-4 backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06] md:rounded-[28px] md:p-5"
         >
-          <div className="absolute right-4 top-4 text-[11px] tracking-[0.2em] text-[#D6B16A]/45">
+          <div className="absolute right-4 top-4 text-[11px] tracking-[0.2em] text-[#D6B16A]/70">
             0{index + 1}
           </div>
 

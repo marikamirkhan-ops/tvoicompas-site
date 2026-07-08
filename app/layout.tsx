@@ -12,26 +12,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://tvoicompas-site.vercel.app"),
+
   title: "Твой Компас — экскурсии по Кавказу",
 
   description:
     "Однодневные экскурсии по Северному Кавказу. Джилы-Су, Бермамыт, Домбай, Эльбрус, Архыз и другие направления. Комфортные внедорожники, мини-группы и выезд из любой точки КМВ.",
 
   icons: {
-  icon: "/favicon.png",
-},
+    icon: "/favicon.png",
+  },
 
   openGraph: {
     title: "Твой Компас — экскурсии по Кавказу",
-
     description:
       "Однодневные экскурсии по Северному Кавказу. Комфортные внедорожники, мини-группы и выезд из любой точки КМВ.",
-
     url: "https://tvoicompas-site.vercel.app",
-
     siteName: "Твой Компас",
-
     images: [
       {
         url: "/og-image.png",
@@ -40,7 +38,6 @@ export const metadata = {
         alt: "Твой Компас",
       },
     ],
-
     locale: "ru_RU",
     type: "website",
   },
@@ -53,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="ru"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
