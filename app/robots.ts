@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
 
-    sitemap: "https://tvoicompas-site.vercel.app/sitemap.xml",
+    sitemap: "https://tvoicompass.ru/sitemap.xml",
   };
 }

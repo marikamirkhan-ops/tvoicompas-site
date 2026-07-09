@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Твой Компас — экскурсии по Кавказу",
     description:
       "Однодневные экскурсии по Северному Кавказу. Комфортные внедорожники, мини-группы и выезд из любой точки КМВ.",
-    url: "https://tvoicompas-site.vercel.app",
+    url: "https://tvoicompass.ru",
     siteName: "Твой Компас",
     images: [
       {
