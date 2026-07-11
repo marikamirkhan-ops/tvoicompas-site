@@ -236,7 +236,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       {[
         {
           title: "Джилы-Су",
-          image: "/images/jily-su.jpg",
+          image: "/images/jilysu.jpg",
           desc: "Самая красивая дорога в России.",
           price: "от 3 700 ₽",
           time: "8–9 часов",

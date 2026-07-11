@@ -8,7 +8,7 @@ export default function JilySuPage() {
   return (
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
       <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20">
-  <div className="absolute inset-0 bg-[url('/images/jilysu-main.jpg')] bg-cover bg-center opacity-60" />
+  <div className="absolute inset-0 bg-[url('/images/bermamyt-main.jpg')] bg-cover bg-center opacity-60" />
   <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/80 to-transparent" />
   <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-[#101820]/40" />
 
