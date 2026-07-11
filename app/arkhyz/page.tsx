@@ -149,14 +149,14 @@ export default function JilySuPage() {
   className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
 >
       {[
-        "/images/jilysu-1.jpg",
-        "/images/jilysu-2.jpg",
-        "/images/jilysu-3.jpg",
-        "/images/jilysu-4.jpg",
-        "/images/jilysu-5.jpg",
-        "/images/jilysu-6.jpg",
-        "/images/jilysu-7.jpg",
-        "/images/jilysu-8.jpg",
+        "/images/arkhyz-1.jpg",
+        "/images/arkhyz-2.jpg",
+        "/images/arkhyz-3.jpg",
+        "/images/arkhyz-4.jpg",
+        "/images/arkhyz-5.jpg",
+        "/images/arkhyz-6.jpg",
+        "/images/arkhyz-7.jpg",
+        "/images/arkhyz-8.jpg",
       ].map((image, index) => (
         <div
           key={index}
@@ -176,14 +176,14 @@ export default function JilySuPage() {
 
   <div className="mt-6 flex items-center justify-center gap-2">
   {[
-    "/images/jilysu-1.jpg",
-    "/images/jilysu-2.jpg",
-    "/images/jilysu-3.jpg",
-    "/images/jilysu-4.jpg",
-    "/images/jilysu-5.jpg",
-    "/images/jilysu-6.jpg",
-    "/images/jilysu-7.jpg",
-    "/images/jilysu-8.jpg",
+    "/images/arkhyz-1.jpg",
+    "/images/arkhyz-2.jpg",
+    "/images/arkhyz-3.jpg",
+    "/images/arkhyz-4.jpg",
+    "/images/arkhyz-5.jpg",
+    "/images/arkhyz-6.jpg",
+    "/images/arkhyz-7.jpg",
+    "/images/arkhyz-8.jpg",
   ].map((_, index) => (
     <button
       key={index}
