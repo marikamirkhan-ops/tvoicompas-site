@@ -244,7 +244,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         },
         {
           title: "Бермамыт",
-          image: "/images/bermamut.jpg",
+          image: "/images/bermamyt.jpg",
           desc: "Лучшие виды на Эльбрус.",
           price: "от 3 700 ₽",
           time: "6–7 часов",
