@@ -51,7 +51,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
     <a href="#" aria-label="Наверх">
   <img
-    src="/images/logo-round.png"
+    src="/images/logo-round.webp"
     alt="Твой Компас"
     className="h-14 w-14 rounded-full object-cover"
   />
@@ -724,7 +724,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center gap-4">
           <img
-            src="/images/logo-round.png"
+            src="/images/logo-round.webp"
             alt="Твой Компас"
             className="h-12 w-12 rounded-full object-cover"
           />

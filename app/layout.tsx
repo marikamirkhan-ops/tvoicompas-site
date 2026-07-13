@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.webp",
   },
 
   openGraph: {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Твой Компас",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Твой Компас",
