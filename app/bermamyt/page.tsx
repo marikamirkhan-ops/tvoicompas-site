@@ -8,7 +8,7 @@ export default function JilySuPage() {
   return (
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
       <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20">
-  <div className="absolute inset-0 bg-[url('/images/bermamyt-main.jpg')] bg-cover bg-[70%_center] md:bg-center opacity-60" />
+  <div className="absolute inset-0 bg-[url('/images/bermamyt-main.webp')] bg-cover bg-[70%_center] md:bg-center opacity-60" />
   <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/80 to-transparent" />
   <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-[#101820]/40" />
 
@@ -149,14 +149,14 @@ export default function JilySuPage() {
   className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
 >
       {[
-        "/images/bermamyt-1.jpg",
-        "/images/bermamyt-2.jpg",
-        "/images/bermamyt-3.jpg",
-        "/images/bermamyt-4.jpg",
-        "/images/bermamyt-5.jpg",
-        "/images/bermamyt-6.jpg",
-        "/images/bermamyt-7.jpg",
-        "/images/bermamyt-8.jpg",
+        "/images/bermamyt-1.webp",
+        "/images/bermamyt-2.webp",
+        "/images/bermamyt-3.webp",
+        "/images/bermamyt-4.webp",
+        "/images/bermamyt-5.webp",
+        "/images/bermamyt-6.webp",
+        "/images/bermamyt-7.webp",
+        "/images/bermamyt-8.webp",
       ].map((image, index) => (
         <div
           key={index}
@@ -176,14 +176,14 @@ export default function JilySuPage() {
 
   <div className="mt-6 flex items-center justify-center gap-2">
   {[
-    "/images/bermamyt-1.jpg",
-    "/images/bermamyt-2.jpg",
-    "/images/bermamyt-3.jpg",
-    "/images/bermamyt-4.jpg",
-    "/images/bermamyt-5.jpg",
-    "/images/bermamyt-6.jpg",
-    "/images/bermamyt-7.jpg",
-    "/images/bermamyt-8.jpg",
+    "/images/bermamyt-1.webp",
+    "/images/bermamyt-2.webp",
+    "/images/bermamyt-3.webp",
+    "/images/bermamyt-4.webp",
+    "/images/bermamyt-5.webp",
+    "/images/bermamyt-6.webp",
+    "/images/bermamyt-7.webp",
+    "/images/bermamyt-8.webp",
   ].map((_, index) => (
     <button
       key={index}

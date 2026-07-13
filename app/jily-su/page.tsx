@@ -8,7 +8,7 @@ export default function JilySuPage() {
   return (
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
       <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20">
-  <div className="absolute inset-0 bg-[url('/images/jilysu-main.jpg')] bg-cover bg-center opacity-60" />
+  <div className="absolute inset-0 bg-[url('/images/jilysu-main.webp')] bg-cover bg-center opacity-60" />
   <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/80 to-transparent" />
   <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-[#101820]/40" />
 
@@ -149,14 +149,14 @@ export default function JilySuPage() {
   className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
 >
       {[
-        "/images/jilysu-1.jpg",
-        "/images/jilysu-2.jpg",
-        "/images/jilysu-3.jpg",
-        "/images/jilysu-4.jpg",
-        "/images/jilysu-5.jpg",
-        "/images/jilysu-6.jpg",
-        "/images/jilysu-7.jpg",
-        "/images/jilysu-8.jpg",
+        "/images/jilysu-1.webp",
+        "/images/jilysu-2.webp",
+        "/images/jilysu-3.webp",
+        "/images/jilysu-4.webp",
+        "/images/jilysu-5.webp",
+        "/images/jilysu-6.webp",
+        "/images/jilysu-7.webp",
+        "/images/jilysu-8.webp",
       ].map((image, index) => (
         <div
           key={index}
@@ -176,14 +176,14 @@ export default function JilySuPage() {
 
   <div className="mt-6 flex items-center justify-center gap-2">
   {[
-    "/images/jilysu-1.jpg",
-    "/images/jilysu-2.jpg",
-    "/images/jilysu-3.jpg",
-    "/images/jilysu-4.jpg",
-    "/images/jilysu-5.jpg",
-    "/images/jilysu-6.jpg",
-    "/images/jilysu-7.jpg",
-    "/images/jilysu-8.jpg",
+    "/images/jilysu-1.webp",
+    "/images/jilysu-2.webp",
+    "/images/jilysu-3.webp",
+    "/images/jilysu-4.webp",
+    "/images/jilysu-5.webp",
+    "/images/jilysu-6.webp",
+    "/images/jilysu-7.webp",
+    "/images/jilysu-8.webp",
   ].map((_, index) => (
     <button
       key={index}

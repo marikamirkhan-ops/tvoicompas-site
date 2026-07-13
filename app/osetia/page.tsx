@@ -8,7 +8,7 @@ export default function JilySuPage() {
   return (
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
       <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20">
-  <div className="absolute inset-0 bg-[url('/images/osetia-main.jpg')] bg-cover bg-center opacity-60" />
+  <div className="absolute inset-0 bg-[url('/images/osetia-main.webp')] bg-cover bg-center opacity-60" />
   <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/80 to-transparent" />
   <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-[#101820]/40" />
 
@@ -149,14 +149,14 @@ export default function JilySuPage() {
   className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
 >
       {[
-        "/images/osetia-1.jpg",
-        "/images/osetia-2.jpg",
-        "/images/osetia-3.jpg",
-        "/images/osetia-4.jpg",
-        "/images/osetia-5.jpg",
-        "/images/osetia-6.jpg",
-        "/images/osetia-7.jpg",
-        "/images/osetia-8.jpg",
+        "/images/osetia-1.webp",
+        "/images/osetia-2.webp",
+        "/images/osetia-3.webp",
+        "/images/osetia-4.webp",
+        "/images/osetia-5.webp",
+        "/images/osetia-6.webp",
+        "/images/osetia-7.webp",
+        "/images/osetia-8.webp",
       ].map((image, index) => (
         <div
           key={index}
@@ -176,14 +176,14 @@ export default function JilySuPage() {
 
   <div className="mt-6 flex items-center justify-center gap-2">
   {[
-    "/images/osetia-1.jpg",
-    "/images/osetia-2.jpg",
-    "/images/osetia-3.jpg",
-    "/images/osetia-4.jpg",
-    "/images/osetia-5.jpg",
-    "/images/osetia-6.jpg",
-    "/images/osetia-7.jpg",
-    "/images/osetia-8.jpg",
+    "/images/osetia-1.webp",
+    "/images/osetia-2.webp",
+    "/images/osetia-3.webp",
+    "/images/osetia-4.webp",
+    "/images/osetia-5.webp",
+    "/images/osetia-6.webp",
+    "/images/osetia-7.webp",
+    "/images/osetia-8.webp",
   ].map((_, index) => (
     <button
       key={index}

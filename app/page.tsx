@@ -114,7 +114,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 </header>
 
       <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20">
-  <div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-60" />
+  <div className="absolute inset-0 bg-[url('/images/hero.webp')] bg-cover bg-center opacity-60" />
 
   <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/80 to-transparent" />
 
@@ -236,7 +236,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       {[
         {
           title: "Джилы-Су",
-          image: "/images/jilysu.jpg",
+          image: "/images/jilysu.webp",
           desc: "Самая красивая дорога в России.",
           price: "от 3 700 ₽",
           time: "8–9 часов",
@@ -244,7 +244,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         },
         {
           title: "Бермамыт",
-          image: "/images/bermamyt.jpg",
+          image: "/images/bermamyt.webp",
           desc: "Лучшие виды на Эльбрус.",
           price: "от 3 700 ₽",
           time: "6–7 часов",
@@ -252,7 +252,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         },
         {
           title: "Домбай",
-          image: "/images/dombay.jpg",
+          image: "/images/dombay.webp",
           desc: "Жемчужина Северного Кавказа.",
           price: "от 4 200 ₽",
           time: "12–14 часов",
@@ -260,7 +260,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         },
         {
           title: "Эльбрус",
-          image: "/images/elbrus.jpg",
+          image: "/images/elbrus.webp",
           desc: "Самая высокая вершина Европы.",
           price: "от 4 200 ₽",
           time: "12–14 часов",
@@ -268,7 +268,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         },
         {
           title: "Актопрак",
-          image: "/images/aktoprak.jpg",
+          image: "/images/aktoprak.webp",
           desc: "Красочные виды и горные перевалы.",
           price: "от 4 200 ₽",
           time: "12–14 часов",
@@ -276,7 +276,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         },
         {
           title: "Архыз",
-          image: "/images/arkhyz.jpg",
+          image: "/images/arkhyz.webp",
           desc: "Древние храмы и горные озера.",
           price: "от 4 700 ₽",
           time: "12–14 часов",
@@ -284,7 +284,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         },
         {
           title: "Верхняя Балкария",
-          image: "/images/balkaria.jpg",
+          image: "/images/balkaria.webp",
           desc: "Древняя колыбель Балкарии.",
           price: "от 5 000 ₽",
           time: "12–14 часов",
@@ -292,7 +292,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         },
         {
           title: "Северная Осетия",
-          image: "/images/osetia.jpg",
+          image: "/images/osetia.webp",
           desc: "Ущелья, храмы и город мертвых.",
           price: "от 5 500 ₽",
           time: "12–14 часов",
@@ -300,7 +300,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         },
         {
           title: "Чечня",
-          image: "/images/chechnya.jpg",
+          image: "/images/chechnya.webp",
           desc: "Три города за один день.",
           price: "от 6 000 ₽",
           time: "12–14 часов",
@@ -657,7 +657,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   id="contacts"
   className="scroll-mt-10 relative overflow-hidden bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20"
 >
-  <div className="absolute inset-0 bg-[url('/images/hero.jpg')] bg-cover bg-center opacity-20" />
+  <div className="absolute inset-0 bg-[url('/images/hero.webp')] bg-cover bg-center opacity-20" />
   <div className="absolute inset-0 bg-[#101820]/85" />
 
   <div className="relative z-10 mx-auto max-w-7xl">
