@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 export default function Home() {
@@ -114,7 +115,15 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 </header>
 
       <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20">
-  <div className="absolute inset-0 bg-[url('/images/hero.webp')] bg-cover bg-center opacity-60" />
+  <div className="absolute inset-0">
+  <Image
+    src="/images/hero.webp"
+    alt="Горы Кавказа"
+    fill
+    priority
+    className="object-cover object-center opacity-60"
+  />
+  </div>
 
   <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/80 to-transparent" />
 
