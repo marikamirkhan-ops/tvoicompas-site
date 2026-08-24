@@ -227,7 +227,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 </section>
 <section
   id="all-tours"
-  className="scroll-mt-20 bg-[#0D141B] px-6 py-14 text-[#F5EFE6] md:py-20"
+  className="scroll-mt-10 bg-[#0D141B] px-6 py-14 text-[#F5EFE6] md:py-20"
 >
   <div className="mx-auto max-w-7xl">
     <div className="mb-10">
