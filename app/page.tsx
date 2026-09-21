@@ -156,91 +156,22 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     </p>
   </div>
 </section>
-<section id="routes" className="scroll-mt-10 bg-[#101820] px-6 py-14 text-[#F5EFE6] md:py-20">
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-9">
-      <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[#D6B16A] md:text-sm">
-        Популярные маршруты
-      </p>
-
-      <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
-        Самые популярные экскурсии
-      </h2>
-    </div>
-
-    <div className="grid grid-cols-2 gap-3 md:gap-4">
-      {[
-        {
-          title: "Джилы-Су",
-          price: "от 3 700 ₽",
-          duration: "8–9 часов",
-          href: "/jily-su",
-        },
-        {
-          title: "Домбай",
-          price: "от 4 200 ₽",
-          duration: "12–13 часов",
-          href: "/dombay",
-        },
-        {
-          title: "Бермамыт",
-          price: "от 3 700 ₽",
-          duration: "8–9 часов",
-          href: "/bermamyt",
-        },
-        {
-          title: "Эльбрус",
-          price: "от 4 200 ₽",
-          duration: "12–13 часов",
-          href: "/elbrus",
-        },
-      ].map((tour, index) => (
-        <div
-          key={index}
-          className="rounded-[24px] border border-white/10 bg-white/[0.04] p-4 backdrop-blur-xl transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06] md:rounded-[28px] md:p-5"
-        >
-          <h3 className="text-lg font-semibold tracking-tight md:text-xl">
-            {tour.title}
-          </h3>
-
-          <div className="mt-3 space-y-1">
-            <p className="text-base font-medium text-[#D6B16A] md:text-lg">
-              {tour.price}
-            </p>
-
-            <p className="text-sm text-[#F5EFE6]/60">
-              {tour.duration}
-            </p>
-          </div>
-
-          <Link
-            href={tour.href}
-            scroll={true}
-            className="mt-5 inline-flex text-sm font-medium text-[#F5EFE6]/75 transition hover:text-[#D6B16A]"
->
-            Подробнее →
-          </Link>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
 <section
-  id="all-tours"
+  id="routes"
   className="scroll-mt-10 bg-[#0D141B] px-6 py-14 text-[#F5EFE6] md:py-20"
 >
   <div className="mx-auto max-w-7xl">
     <div className="mb-10">
       <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[#D6B16A] md:text-sm">
-        Все экскурсии
+        Направления
       </p>
 
       <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
-        Выберите свое направление
+        Основные направления
       </h2>
 
       <p className="mt-4 max-w-2xl text-base leading-7 text-[#F5EFE6]/70">
-        Однодневные экскурсии по самым красивым местам Северного Кавказа.
+        Групповые и индивидуальные экскурсии по самым красивым местам Северного Кавказа.
       </p>
     </div>
 
@@ -253,6 +184,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           price: "от 3 700 ₽",
           time: "8–9 часов",
           href: "/jily-su",
+          popular: true,
         },
         {
           title: "Бермамыт",
@@ -261,6 +193,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           price: "от 3 700 ₽",
           time: "6–7 часов",
           href: "/bermamyt",
+          popular: true,
         },
         {
           title: "Домбай",
@@ -269,6 +202,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           price: "от 4 200 ₽",
           time: "12–14 часов",
           href: "/dombay",
+          popular: true,
         },
         {
           title: "Эльбрус",
@@ -277,6 +211,7 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           price: "от 4 200 ₽",
           time: "12–14 часов",
           href: "/elbrus",
+          popular: true,
         },
         {
           title: "Актопрак",
@@ -323,12 +258,18 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           key={tour.title}
           className="group overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06]"
         >
-          <div className="overflow-hidden">
+          <div className="relative overflow-hidden">
             <img
               src={tour.image}
               alt={tour.title}
               className="h-44 w-full object-cover transition duration-700 group-hover:scale-105 md:h-64"
             />
+
+            {tour.popular && (
+              <span className="absolute left-4 top-4 rounded-full border border-[#D6B16A]/40 bg-[#101820]/85 px-3 py-1.5 text-xs font-medium text-[#D6B16A] backdrop-blur-md">
+                Популярный маршрут
+              </span>
+            )}
           </div>
 
           <div className="p-5 md:p-6">
