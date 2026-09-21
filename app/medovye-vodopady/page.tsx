@@ -4,13 +4,13 @@ import { useRef, useState } from "react";
 
 const galleryImages = [
   "/images/medovye-1.webp",
-  "/images/medovye-2.webp",
   "/images/medovye-3.webp",
-  "/images/medovye-4.webp",
   "/images/medovye-5.webp",
   "/images/medovye-6.webp",
   "/images/medovye-7.webp",
   "/images/medovye-8.webp",
+  "/images/medovye-2.webp",
+  "/images/medovye-4.webp",
 ];
 
 const program = [
@@ -78,7 +78,7 @@ export default function MedovyeVodopadyPage() {
   return (
     <main className="min-h-screen bg-[#101820] text-[#F5EFE6]">
       <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20">
-        <div className="absolute inset-0 bg-[url('/images/medovye-main.webp')] bg-cover bg-center opacity-60" />
+        <div className="absolute inset-0 bg-[url('/images/medovye-1.webp')] bg-cover bg-center opacity-60 md:bg-[url('/images/medovye-main.webp')]" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#101820] via-[#101820]/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-transparent to-[#101820]/40" />
 
@@ -94,8 +94,8 @@ export default function MedovyeVodopadyPage() {
             Медовые Водопады
           </p>
 
-          <h1 className="max-w-5xl text-4xl font-semibold leading-tight tracking-tight md:text-7xl">
-            Медовые Водопады + Суворовские термальные источники
+          <h1 className="max-w-5xl text-3xl font-semibold leading-tight tracking-tight md:text-6xl">
+            Медовые Водопады и Суворовские источники
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-[#F5EFE6]/75 md:text-xl">
