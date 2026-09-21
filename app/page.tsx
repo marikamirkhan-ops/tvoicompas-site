@@ -253,6 +253,14 @@ const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
           time: "12–14 часов",
           href: "/chechnya",
         },
+        {
+          title: "Медовые Водопады + Суворовские источники",
+          image: "/images/medovye.webp",
+          desc: "Водопады и отдых в термальных бассейнах.",
+          price: "от 3 000 ₽",
+          time: "5–6 часов",
+          href: "/medovye-vodopady",
+        },
       ].map((tour) => (
         <div
           key={tour.title}
