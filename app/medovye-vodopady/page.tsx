@@ -103,11 +103,11 @@ export default function MedovyeVodopadyPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-[#F5EFE6]/65">
-            {["5–6 часов", "Мини-группа до 7 человек", "Выезд в 9:00–10:00"].map(
+            {["Продолжительность: 5–6 часов", "В группе до 7 человек", "Выезд в 9:00–10:00", "Заберём от места проживания"].map(
               (item, index) => (
                 <div key={item} className="flex items-center gap-3">
                   <span>{item}</span>
-                  {index !== 2 && <span className="text-[#D6B16A]/60">•</span>}
+                  {index !== 3 && <span className="text-[#D6B16A]/60">•</span>}
                 </div>
               ),
             )}

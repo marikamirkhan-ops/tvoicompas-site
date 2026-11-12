@@ -33,11 +33,11 @@ export default function JilySuPage() {
     </p>
 
     <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-[#F5EFE6]/65">
-  {["1 день", "Мини-группа", "Комфортный внедорожник"].map((item, index) => (
+  {["Продолжительность: 12–14 часов", "В группе до 7 человек", "Выезд около 6:00–7:00", "Заберём от места проживания"].map((item, index) => (
     <div key={item} className="flex items-center gap-3">
       <span>{item}</span>
 
-      {index !== 2 && (
+      {index !== 3 && (
         <span className="text-[#D6B16A]/60">•</span>
       )}
     </div>
