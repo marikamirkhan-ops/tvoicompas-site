@@ -103,7 +103,7 @@ export default function MedovyeVodopadyPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-[#F5EFE6]/65">
-            {["Продолжительность: 5–6 часов", "В группе до 7 человек", "Выезд в 9:00–10:00", "Заберём от места проживания"].map(
+            {["Продолжительность: 5–6 часов", "Мини-группа 6–8 человек", "Выезд в 9:00–10:00", "Заберём от места проживания"].map(
               (item, index) => (
                 <div key={item} className="flex items-center gap-3">
                   <span>{item}</span>
@@ -115,7 +115,7 @@ export default function MedovyeVodopadyPage() {
 
           <div className="mt-10">
             <a
-              href="https://wa.me/79298606885"
+              href="https://t.me/tvoicompas26"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex rounded-full bg-[#D6B16A] px-8 py-4 text-base font-semibold text-[#101820] transition hover:bg-[#E7C98C]"
@@ -313,7 +313,7 @@ export default function MedovyeVodopadyPage() {
           </p>
           <div className="mt-10">
             <a
-              href="https://wa.me/79298606885"
+              href="https://t.me/tvoicompas26"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex rounded-full bg-[#D6B16A] px-8 py-4 text-base font-semibold text-[#101820] transition hover:bg-[#E7C98C]"
